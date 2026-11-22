@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F26A10">
+<title>بوب وان | Pop One</title>
+<meta name="description" content="بوب وان - أول فرايد تشكن شاورما في مصر. شوف المنيو والعروض واطلب على واتساب.">
+<meta property="og:title" content="بوب وان | Pop One">
+<meta property="og:description" content="أول فرايد تشكن شاورما في مصر - المنيو والعروض واطلب على واتساب">
+<meta property="og:image" content="images/hero.jpg">
+<link rel="icon" href="images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--or:#F26A10;--or-hi:#FF8F0A;--or-dk:#D9540A;--red:#C1272D;--ink:#3A1706;--cream:#FFF3E4;--wh:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',Tahoma,sans-serif;color:var(--ink);line-height:1.6;min-height:100vh;
+ background:radial-gradient(ellipse at 50% 20%,var(--or-hi),var(--or) 55%,var(--or-dk)) fixed;padding-bottom:80px}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0}
+:focus-visible{outline:3px solid var(--wh);outline-offset:2px}
+header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,var(--or-hi),var(--or));padding:8px 16px;padding-top:calc(8px + env(safe-area-inset-top,0px));box-shadow:0 3px 14px rgba(120,40,0,.35)}
+.bar{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bar img{height:34px;width:auto;display:block}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--wh);color:var(--red);font-weight:900;font-size:.95rem;padding:8px 18px;border-radius:50px;box-shadow:0 3px 0 rgba(120,40,0,.35);transition:transform .15s}
+.pill:active{transform:translateY(2px);box-shadow:none}
+.pill.red{background:var(--red);color:var(--wh);box-shadow:0 3px 0 #7d1015}
+.pill svg{width:20px;height:20px;fill:currentColor}
+nav{position:sticky;top:calc(50px + env(safe-area-inset-top,0px));z-index:40;background:var(--cream);box-shadow:0 2px 10px rgba(120,40,0,.25)}
+nav ul{list-style:none;display:flex;gap:8px;overflow-x:auto;padding:10px 16px;max-width:1200px;margin:auto;scrollbar-width:none}
+nav ul::-webkit-scrollbar{display:none}
+nav button{white-space:nowrap;background:var(--wh);color:var(--ink);font-weight:700;font-size:.9rem;padding:7px 16px;border-radius:50px;border:2px solid #F7C79A;transition:all .15s}
+nav button.on{background:var(--or);border-color:var(--or);color:var(--wh)}
+nav button.hot{background:var(--red);border-color:var(--red);color:var(--wh);font-weight:900}
+nav button.hot.on{box-shadow:0 0 0 3px #fff inset}
+.hero{position:relative;min-height:min(62vw,430px);display:flex;align-items:flex-end;justify-content:center;text-align:center;
+ background:url(images/hero.jpg) center/cover;padding:24px 16px}
+.hero div{background:linear-gradient(0deg,rgba(217,84,10,.9),rgba(217,84,10,0));position:absolute;inset:auto 0 0;height:60%}
+.hero-in{position:relative;z-index:1;color:var(--wh);background:none!important;height:auto!important;position:relative!important}
+.hero h1{font-size:clamp(1.3rem,4.5vw,2.2rem);font-weight:900;text-shadow:0 2px 8px rgba(120,40,0,.5);margin-bottom:12px}
+.hero .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+main{max-width:1200px;margin:auto;padding:24px 14px}
+.sec{display:none}.sec.on{display:block;animation:in .3s ease}
+@keyframes in{from{opacity:0}to{opacity:1}}
+h2{color:var(--wh);font-weight:900;font-size:clamp(1.5rem,5vw,2.4rem);line-height:1.2;text-align:center;text-shadow:0 2px 0 rgba(120,40,0,.35)}
+h2 small{display:block;font-size:.5em;font-weight:700;opacity:.92}
+.sub{text-align:center;color:#fff;opacity:.95;margin:6px 0 20px;font-size:.95rem}
+.pages{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:20px}
+.pg{background:var(--wh);border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(120,40,0,.35);flex:1 1 320px;max-width:600px;cursor:zoom-in;border:0;padding:0;display:block}
+.pg img{width:100%;height:auto;display:block}
+.pg.wide{max-width:900px;flex-basis:100%}
+.pg.slim{max-width:520px}
+.offers{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:20px;margin-top:20px}
+.offer{background:var(--wh);border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(120,40,0,.35);display:flex;flex-direction:column}
+.offer button.z{padding:0;background:none;cursor:zoom-in}
+.offer img{width:100%;height:auto;display:block}
+.offer .ft{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px}
+.offer b{font-size:1.05rem;font-weight:900}
+.price{background:var(--red);color:var(--wh);font-weight:900;border-radius:12px;padding:2px 12px;white-space:nowrap}
+footer{max-width:1200px;margin:10px auto 0;padding:0 14px}
+.ft-card{background:var(--wh);border-radius:20px;padding:22px;box-shadow:0 8px 24px rgba(120,40,0,.35);display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.ft-card h3{color:var(--red);font-weight:900;font-size:1.05rem}
+.ft-card a{font-weight:900;font-size:1.25rem;direction:ltr;display:inline-block}
+.ft-card p{font-size:.92rem}
+.note{text-align:center;color:#fff;font-size:.85rem;margin:16px 0 0;opacity:.95}
+.fab-old{position:fixed;inset-inline-start:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 5px 16px rgba(0,0,0,.35)}
+.fab svg{width:32px;height:32px;fill:#fff}
+.modal{position:fixed;inset:0;z-index:100;background:rgba(58,23,6,.7);display:none;align-items:flex-end;justify-content:center}
+.modal.on{display:flex}
+.sheet{background:var(--cream);width:100%;max-width:520px;max-height:92vh;overflow:auto;border-radius:24px 24px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}
+@media(min-width:600px){.modal{align-items:center}.sheet{border-radius:24px}}
+.sheet h3{font-weight:900;font-size:1.3rem;color:var(--red);display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.x{background:var(--wh);width:36px;height:36px;border-radius:50%;font-size:1.1rem;color:var(--ink)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.seg button{padding:10px;border-radius:12px;background:var(--wh);border:2px solid #F7C79A;font-weight:700;font-size:1rem}
+.seg button.on{background:var(--or);border-color:var(--or);color:var(--wh)}
+label{display:block;font-weight:700;font-size:.9rem;margin:10px 0 4px}
+input,textarea{width:100%;font:inherit;padding:10px 12px;border-radius:12px;border:2px solid #F7C79A;background:var(--wh);color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--or);outline:0}
+.bad{border-color:var(--red)!important}
+.err{color:var(--red);font-size:.85rem;min-height:1.2em;margin-top:6px}
+.send{width:100%;margin-top:14px;justify-content:center;font-size:1.05rem;padding:13px;background:#25D366;color:var(--wh);box-shadow:0 3px 0 #128C4A}
+.lb{position:fixed;inset:0;z-index:120;background:rgba(30,10,0,.92);display:none;overflow:auto;padding:56px 10px 20px}
+.lb.on{display:block}
+.lb img{display:block;margin:auto;max-width:min(100%,900px);height:auto;border-radius:10px;background:#fff}
+.lb .x{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));inset-inline-start:12px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+
+.hdr-cart{position:relative}
+.badge{background:var(--or);color:#fff;border-radius:50px;min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:.8rem;padding:0 6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;margin-top:18px}
+.card{background:var(--wh);border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(120,40,0,.35);display:flex;flex-direction:column}
+.card .im{aspect-ratio:16/10;background:linear-gradient(rgba(242,106,16,.78),rgba(242,106,16,.78)),url(images/pattern.jpg) center/cover;display:grid;place-items:center;font-size:3.4rem;position:relative;overflow:hidden}
+.card .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff}
+.card .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:1.1rem;font-weight:900;line-height:1.35}
+.card .en{font-size:.8rem;color:#8a6a55;direction:ltr;text-align:right}
+.card .ds{font-size:.88rem;color:#6b4a38;flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.chips button{background:var(--cream);border:2px solid #F7C79A;border-radius:50px;padding:3px 12px;font-weight:700;font-size:.85rem;color:var(--ink)}
+.chips button.on{background:var(--or);border-color:var(--or);color:#fff}
+.row2{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px}
+.card .price{font-size:1.1rem;background:none;color:var(--ink);padding:0}
+.add{background:var(--or);color:#fff;font-weight:900;padding:9px 18px;border-radius:50px;box-shadow:0 3px 0 #a83c00;font-size:.95rem}
+.add:active{transform:translateY(2px);box-shadow:none}
+.cbar{position:fixed;inset-inline:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:60;max-width:520px;margin:auto;background:var(--red);color:#fff;font-weight:900;border-radius:50px;padding:13px 22px;display:none;justify-content:space-between;box-shadow:0 6px 20px rgba(0,0,0,.4);font-size:1.05rem}
+.cbar.on{display:flex}
+.ln{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px dashed #F0B98A}
+.ln .t{flex:1;font-weight:700;font-size:.95rem;line-height:1.35}.ln .t small{display:block;font-weight:400;color:#8a6a55}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:30px;height:30px;border-radius:50%;background:var(--or);color:#fff;font-weight:900;font-size:1.1rem}
+.tot{display:flex;justify-content:space-between;font-weight:900;font-size:1.2rem;padding:12px 0 4px}
+.hint{font-size:.82rem;color:#8a6a55}
+.empty{text-align:center;padding:24px 0;color:#8a6a55}
+.nt{background:rgba(255,255,255,.2);color:#fff;border-radius:14px;padding:8px 14px;text-align:center;margin:10px auto 0;max-width:760px;font-weight:700;font-size:.9rem}
+.sum{background:var(--wh);border-radius:12px;padding:8px 12px;font-size:.9rem;margin-bottom:6px}
+.sum div{display:flex;justify-content:space-between;gap:8px;padding:2px 0}
+
+.srch{max-width:1200px;margin:auto;padding:14px 14px 0;position:relative}
+.srch input{padding:13px 46px 13px 16px;border-radius:50px;border:0;font-size:1rem;box-shadow:0 4px 14px rgba(120,40,0,.3)}
+.srch span{position:absolute;inset-inline-end:30px;top:26px;font-size:1.1rem;pointer-events:none}
+.card{cursor:pointer;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(120,40,0,.45)}
+.card .im img{transition:transform .35s}.card:hover .im img{transform:scale(1.07)}
+.heart{position:absolute;top:10px;inset-inline-start:10px;z-index:2;width:36px;height:36px;border-radius:50%;background:#fff;font-size:1.1rem;color:#bbb;box-shadow:0 2px 8px rgba(0,0,0,.25);transition:transform .2s}
+.heart.on{color:var(--red)}.heart:active{transform:scale(1.35)}
+.toast{position:fixed;inset-inline:0;bottom:calc(84px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90%;background:var(--ink);color:#fff;font-weight:700;padding:10px 20px;border-radius:50px;z-index:150;opacity:0;transform:translateY(16px);transition:.25s;pointer-events:none}
+.toast.on{opacity:1;transform:none}
+.bump{animation:bump .4s}
+@keyframes bump{40%{transform:scale(1.25)}}
+.hero-in h1{animation:pop .7s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.85) translateY(14px)}}
+.dim{aspect-ratio:16/10;border-radius:16px;margin-bottom:12px;background:linear-gradient(rgba(242,106,16,.78),rgba(242,106,16,.78)),url(images/pattern.jpg) center/cover;display:grid;place-items:center;font-size:4rem;position:relative;overflow:hidden}.dim img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff}
+.dm .en{font-size:.85rem;color:#8a6a55;direction:ltr;text-align:right}.dm p{margin:8px 0;color:#6b4a38}
+.dm .chips button{padding:6px 16px;font-size:.95rem}
+.dtot{display:flex;align-items:center;justify-content:space-between;margin-top:14px;gap:10px}
+.dtot .add{flex:1;font-size:1.05rem;padding:12px}
+.qty.big button{width:38px;height:38px}.qty.big b{min-width:24px;text-align:center;font-size:1.1rem}
+.sec .none{color:#fff;text-align:center;padding:30px 0;font-weight:700}
+
+nav button{transition:transform .15s}nav button:active{transform:scale(.93)}
+.card .im img.ph,.dim img.ph{object-fit:cover}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="wa" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.7.3 1.26.49 1.7.63.72.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.41z"/></symbol></svg>
+
+<header><div class="bar">
+  <a href="#" aria-label="بوب وان"><img src="images/logo.png" alt="Pop One"></a>
+  <button class="pill hdr-cart" type="button" data-cart>🛒 السلة <span class="badge" id="cn">0</span></button>
+</div></header>
+
+<section class="hero" aria-label="بوب وان">
+  <div></div>
+  <div class="hero-in">
+    <h1>أول فرايد تشكن شاورما في مصر</h1>
+</div>
+</section>
+
+<nav aria-label="أقسام المنيو"><ul id="tabs"></ul></nav>
+<div class="srch"><input id="q" type="search" placeholder="دوّر على صنف... (برجر، بيتزا، شاورما)" aria-label="بحث"><span>🔍</span></div>
+<main id="main"></main>
+
+<footer>
+  <div class="ft-card">
+    <div><h3>اطلب من هنا</h3><a href="tel:15443">15443</a><br><a href="tel:01200008000">01200008000</a></div>
+    <div><h3>واتساب</h3><a href="https://wa.me/201200008000" target="_blank" rel="noopener">01200008000</a></div>
+    <div><h3>الفرع</h3><p>فرع أكتوبر: الحصري - مجمع الأمريكية - أبراج علي الدين</p></div>
+  </div>
+  <p class="note">الأسعار شاملة ضريبة القيمة المضافة · يضاف 12% خدمة داخل الصالة</p>
+</footer>
+
+<button class="cbar" id="cbar" type="button" data-cart><span id="cbn"></span><span id="cbt"></span></button>
+
+<div class="toast" id="toast"></div>
+<div class="modal" id="dm" role="dialog" aria-label="تفاصيل الصنف"><div class="sheet dm"><h3><span id="dt"></span><button class="x" type="button" data-close aria-label="إغلاق">✕</button></h3><div id="db"></div></div></div>
+<div class="modal" id="cm" role="dialog" aria-label="السلة"><div class="sheet">
+  <h3>🛒 سلة الطلبات <button class="x" type="button" data-close aria-label="إغلاق">✕</button></h3>
+  <div id="cl"></div>
+  <div class="tot" id="ct"><span>الإجمالي</span><span id="cs"></span></div>
+  <div class="hint">الإجمالي بدون مصاريف التوصيل. هنأكد معاك التفاصيل على واتساب.</div>
+  <button class="pill send" type="button" id="co" style="background:var(--red);box-shadow:0 3px 0 #7d1015">متابعة الطلب</button>
+</div></div>
+
+<div class="modal" id="om" role="dialog" aria-label="إتمام الطلب"><div class="sheet">
+  <h3>إتمام الطلب <button class="x" type="button" data-close aria-label="إغلاق">✕</button></h3>
+  <div class="sum" id="sm"></div>
+  <div class="seg" id="seg"><button type="button" data-t="توصيل" class="on">🛵 توصيل</button><button type="button" data-t="استلام من الفرع">🏪 استلام من الفرع</button></div>
+  <label for="fn">الاسم</label><input id="fn" autocomplete="name">
+  <label for="fp">رقم الموبايل</label><input id="fp" type="tel" inputmode="numeric" placeholder="01xxxxxxxxx" autocomplete="tel">
+  <div id="adr"><label for="fa">العنوان بالتفصيل</label><input id="fa" autocomplete="street-address" placeholder="المنطقة - الشارع - رقم العمارة - الدور - علامة مميزة"></div>
+  <label for="fo">ملاحظات على الطلب</label><textarea id="fo" rows="2" placeholder="اختياري: من غير صوص، حار..."></textarea>
+  <div class="err" id="er"></div>
+  <button class="pill send" type="button" id="go"><svg><use href="#wa"/></svg> ابعت الطلب على واتساب</button>
+</div></div>
+
+<script>
+const WA='201200008000', I='images/';
+const M=(l,f)=>[l&&['لحمة',l],f&&['فراخ',f]].filter(Boolean);
+const PZ=(l,m,s)=>[['كبير',l],['وسط',m],['صغير',s]];
+const FT=(m,l)=>[['وسط',m],['كبير',l]];
+const BG=(a,b,c)=>[['200 جم',a],['150 جم',b],['100 جم',c]];
+const ST='5 قطع|10 قطع|20 قطع'.split('|');
+// [اسم, English, وصف, سعر أو أنواع, صورة]
+const OFFERS=[
+['عرض البوب هاتريك 🔥','Pop Hat-trick Offer','3 سندوتشات صاج عربي (6 قطع)، 1 شاورما فراخ، 1 شيش، 1 كرسبي، مع بطاطس وتومية وصوص أوري سويت',200,'offer-hotrick'],
+['عرض البوب شاورما 🧡','Pop Shawarma Offer','1 سندوتش شاورما فراخ صاج، 1 فتة شاورما فراخ وسط، مع 2 تومية',140,'offer-shawarma'],
+['عرض البوب ماريا 🧡','Pop Maria Offer','2 سلايس ماريا فراخ، 2 قطعة بروستيد مع بطاطس وتومية وصوص أوري سويت',175,'offer-maria'],
+['عرض البوب ميكس 🔥','Pop Mix Offer','3 قطع شاورما عربي فراخ مع بطاطس ورز، 1 قطعة بروستيد، 1 قطعة دبوس بروستيد، مع تومية وصوص أوري سويت',185,'offer-mix'],
+['عرض البوب غربي 🧡🔥','Pop Gharbi Offer','3 سندوتشات فرنساوي غربي، 1 كرسبي، 1 بوب رول، 1 بطاطس',195,'offer-gharbi']];
+const S=[
+['fried','فرايد تشكن','Fried Chicken','🍗','إضافة أي صوص 12 جنيه',[
+ ['بوكس ستربس / زنجر / سكالوب','Strips · Zinger · Scalop Box','دجاج مقرمش مع بطاطس وكايزر ومايونيز وكول سلو وسبايسي. اختار الحجم.',[['5 قطع',220],['10 قطع',410],['20 قطعة',760]]],
+ ['بوكس ورك','Wark Box','3 قطع فراخ مقلية (ورك ودبوس وجناح) مع بطاطس وكول سلو وثومية وسبايسي وعيش كايزر',135],
+ ['بوكس ورك دبل','Double Wark Box','6 قطع فراخ مقلية (2 ورك و2 دبوس و2 جناح) مع بطاطس وكول سلو وثومية وسبايسي وعيش كايزر',200],
+ ['بوكس صدر','Breast Box','3 قطع فراخ مقلية (صدر وجناح) مع بطاطس وكول سلو وثومية وسبايسي وعيش كايزر',150],
+ ['بوكس فرايد تشكن','Fried Chicken Box','قطع فراخ مقلية مع بطاطس وكول سلو وثومية وسبايسي وعيش كايزر',[['5 قطع',220],['10 قطع',410]]]]],
+['cheetos','شيتوس فرايد تشكن','Cheetos Fried Chicken Broast','🧀','متوفر أورجينال أو حراق · إضافة أي صوص 12 جنيه',[
+ ['بوكس ستربس شيتوس','Cheetos Strips Box','دجاج مقرمش بالشيتوس مع بطاطس وكايزر ومايونيز وكول سلو وسبايسي',[['5 قطع',230],['10 قطع',430],['20 قطعة',800]]],
+ ['بوكس شيتوس ورك','Cheetos Wark Box','3 قطع فراخ شيتوس (ورك ودبوس وجناح) مع بطاطس وكول سلو وثومية وسبايسي وعيش',140],
+ ['بوكس شيتوس ورك دبل','Cheetos Double Wark Box','6 قطع فراخ شيتوس مع بطاطس وكول سلو وثومية وسبايسي وعيش',215],
+ ['بوكس شيتوس صدر','Cheetos Breast Box','3 قطع فراخ شيتوس (صدر وجناح) مع بطاطس وكول سلو وثومية وسبايسي وعيش',155],
+ ['بوكس شيتوس فرايد تشكن','Cheetos Fried Chicken Box','قطع فراخ شيتوس مقلية مع بطاطس وكول سلو وثومية وسبايسي وكايزر',[['5 قطع',230],['10 قطع',450]]]]],
+['fsand','سندوتشات فرايد تشكن','Fried Chicken Sandwiches','🍔','إضافة أي صوص 9 · موزاريلا أو شيدر 12 · كومبو على السندوتشات 45 جنيه',[
+ ['سوبر سوبريم','Super Supreme','قطعتين بانيه مع جبنة موزاريلا وسلامي وكول سلو وصوص بوب وان المميز',135,'it-super-supreme'],
+ ['هالبينو','Hallibeno','صدور دجاج كريسبي حار مع شرائح جبنة الهالبينو والموزاريلا',165,'it-hallibeno'],
+ ['فليتو باي','Filito Bay','قطعة من السمك الفيليه بصوص التارتار الكريمي وصوص الكوكتيل',120,'it-filito'],
+ ['تشكن برجر','Chicken Burger','قطعة تشكن برجر مع بطاطس وكول سلو وجبنة الشيدر',110,'it-chicken-burger'],
+ ['نابولي','Napoli','طبقتين من صدور الدجاج الكريسبي مع شرائح تركي وجبنة وكول سلو وصوص المايونيز',[['سنجل',130],['دبل',170]],'it-napoli'],
+ ['ماليبو','Malebo','صدور الدجاج الكريسبي مع الهوت دوج وحلقات البصل الكريسبي وصوص الديب تشيز',135,'it-malebo'],
+ ['تشيزيتو','Cheeseito','صدور الدجاج الكريسبي وصوص الشيدر مع موزاريلا سيتك وجبنة شرائح وكول سلو',135,'it-cheeseito'],
+ ['بوب وان تشكن','Pop One Chicken','صدور الدجاج الكريسبي مع الشاورما وجبنة الشيدر والمخلل والمايونيز',150,'it-popone-chicken']]],
+['beef','بيف برجر','Beef Burger Sandwiches','🍔','كومبو على السندوتشات 45 · إضافة بيض 10 · صوص 9 · موزاريلا أو شيدر 12 جنيه',[
+ ['بيف برجر','Beef Burger','شريحة لحم مع البصل والطماطم وقطع المخلل مع جبنة الشيدر وصوص المال والمايونيز',BG(165,140,115),'it-beef'],
+ ['بوب وان برجر','Pop One Burger','شريحة لحم مع صوص البصل المكرمل مع قطعتين بوب تشيز الخطرة وصوص المشروم',BG(165,140,115),'it-popone-burger'],
+ ['تكساس برجر','Texas Burger','شريحة لحم مع البصل والطماطم وصوص تكساس وقطع المخلل مع جبنة الشيدر',BG(165,140,115),'it-texas'],
+ ['باربكيو برجر','BBQ Burger','شريحة لحم مع صوص الباربكيو وشرائح الجبنة الشيدر وحلقات البصل الكريسبي وصوص البصل الكريمي',BG(165,140,115),'it-bbq']]],
+['classic','سندوتشات كلاسيك','Sandwiches Classic','🥖','إضافة أي صوص 9 · موزاريلا أو شيدر 12 جنيه',[
+ ['كرانشي','Crunchy','',110],['كريسبي','Crispy','',105],['كريسبي شيتوس','Crispy Cheetos','',105],
+ ['فاهيتا','Fajita','مع موزاريلا',110],['بوب رول','Pop Roll','',110],
+ ['جيرو تشكن','Gyro Chicken','شرائح الدجاج المشوي أو المقلي مع الطماطم والخس والبصل وصوص التزاتزيكي',100],
+ ['جيرو لحم','Gyro Beef','شرائح اللحم والطماطم والبصل والخس وصوص التزاتزيكي',115],
+ ['زنجر','Zenjer','',105],['تشيكن بانيه','Chicken Panne','',105],['تشيكن سبايسي','Chicken Spicy','',105],['شيش طاووق','Shish Tawook','',105]]],
+['shsand','سندوتشات شاورما','Shawarma Sandwiches','🌯','اختار لحمة أو فراخ',[
+ ['سندوتش شاورما كايزر','Shawarma Kaiser','',M(45,35)],['سندوتش شاورما كايزر اكس لارج','Kaiser XL','',M(78,63)],
+ ['سندوتش شاورما لارج (عيش لبناني)','Large Lebanese','',M(62,47)],['سندوتش شاورما صاج اكس لارج','Saj XL','',M(105,90)],
+ ['سندوتش شاورما صاج اكس لارج موزاريلا','Saj XL Mozzarella','',M(115,100)],['سندوتش شاورما راب','Shawarma Wrap','',M(98,82)],
+ ['سندوتش شاورما شيدر','Shawarma Cheddar','',M(110,100)],['سندوتش شاورما هالبينو اكس لارج','Halapeno XL','',M(110,95)],
+ ['سندوتش شاورما هالبينو فرنساوي','Halapeno French','',M(115,100)],['سندوتش شاورما فرنساوي','Shawarma French','',M(110,100)],
+ ['سندوتش فرنساوي موزاريلا','French Mozzarella','',M(125,110)]]],
+['maria','ماريا بوب وان','Maria Pop One','🥪','اختار لحمة أو فراخ',[
+['ماريا بوب وان شاورما','Maria Pop One','',M(155,130)],['ماريا بوب وان هالبينو','Maria Halapeno','',M(160,135)],
+ ['ماريا بوب وان موزاريلا','Maria Mozzarella','',M(170,155)],['ماريا بوب وان شاورما مكس','Maria Mix','',150]]],
+['shbox','بوكسات شاورما','Shawarma Boxes','📦','اختار لحمة أو فراخ',[
+ ['بوكس عربي اكس لارج','Arabi XL Box','',M(160,140)],['بوكس عربي اكس لارج موزاريلا','Arabi XL Mozzarella','',M(170,150)],
+ ['بوكس عربي اكس لارج دبل','Arabi XL Double','',M(265,225)],['بوكس عربي اكس لارج موزاريلا دبل','Arabi XL Mozzarella Double','',M(270,245)],
+ ['بوكس عربي هالبينو','Arabi Halapeno','',M(165,145)],['بوكس عربي هالبينو دبل','Arabi Halapeno Double','',M(260,230)],
+ ['بوكس عربي باربكيو اكس لارج','Arabi BBQ XL','',160],['بوكس عربي باربكيو اكس لارج دبل','Arabi BBQ XL Double','',260],
+ ['بوكس عربي اكس لارج دبل مكس','Arabi XL Double Mix','',250],['بوكس شاورما عربي فرنساوي','Arabi French','',M(170,150)],
+ ['بوكس شاورما فاميلي','Family Box','',M(520,470)],['بوكس شاورما فاميلي مكس','Family Mix','',485],['بوكس شاورما فاميلي موزاريلا','Family Mozzarella','',M(600,520)],
+ ['بوكس شاورما 4 كايزر','4 Kaiser Box','',M(170,130)],['بوكس شاورما 4 كايزر مكس','4 Kaiser Mix','',145],
+ ['بوكس شاورما 6 كايزر','6 Kaiser Box','',M(255,200)],['بوكس شاورما 6 كايزر مكس','6 Kaiser Mix','',220],
+ ['بوكس شاورما شرائح ميديم','Slices Medium','علبة ثومية، عيش محمص، بطاطس، صوص من اختيار العميل',M(210,180)],
+ ['بوكس شاورما شرائح لارج','Slices Large','2 علبة ثومية، عيش محمص، بطاطس، صوص من اختيار العميل',M(390,320)],
+ ['بوكس شاورما شرائح فاميلي','Slices Family','3 علبة ثومية، عيش محمص، بطاطس، صوص من اختيار العميل',M(720,600)]]],
+['fateh','فتات الشاورما','Shawarma Fateh · Mix Fateh','🥣','إضافة صوص على الفتة: وسط 10 · كبير 15 جنيه',[
+ ['فتة شاورما فراخ','Shawarma Fateh Chicken','',FT(105,130)],['فتة شاورما لحمة','Shawarma Fateh Beef','',FT(130,155)],
+ ['فتة شاورما مكس','Shawarma Fateh Mix','',FT(125,155)],['فتة بوب وان شاورما مع مكسرات','Pop One Fateh with Nuts','',FT(140,165)],
+ ['فتة ستربس','Strips Fateh','',FT(110,135)],['فتة مكسيكانو','Mexicano Fateh','',FT(110,135)]]],
+['mix','عروض بوب وان','Mix Boxes','🎁','تبديل ساندوتش الشاورما الفراخ في البوكسات بساندوتش لحمة يضاف 10 جنيه',[
+ ['بوب وان بوكس','Pop One Box','3 قطع ستربس مع 3 ساندوتش شاورما عربي، بطاطس، ثومية، سبايسي، عيش محمص',275],
+ ['بروستي بوب','Broasted Pop','3 قطع ورك و3 قطع دبوس فرايد تشكن مع بطاطس وثومية وسبايسي وعيش محمص',275],
+ ['دبل مكس بوب','Double Mix Pop','2 ساندوتش شاورما عربي و8 قطع ستربس مع بطاطس وثومية وسبايسي وعيش محمص',320],
+ ['مكس بوب','Mix Pop','ساندوتش شاورما عربي مع قطع ستربس وبطاطس وثومية وسبايسي وعيش محمص',200],
+ ['فليتو فيش رايز','Filito Fish Rice','3 قطع فيليه سمك مقلي مع الأرز وصوص التارتار والعيش المحمص',165],
+ ['كريسبي رايز','Crispy Rice','3 قطع كريسبي مقلي مع الأرز والعيش المحمص',165],
+ ['كينج بوب','King Pop','ساندوتش شاورما عربي مع ورك ودبوس فرايد تشكن، ثومية، سبايسي، بطاطس، عيش محمص',220],
+ ['توينز بوب بوكس','Twins Pop Box','2 ساندوتش ميني نابولي مع 2 ساندوتش ميني كريسبي مع 2 ساندوتش شاورما كايزر',275],
+ ['هابي بوب','Happy Pop','3 قطع ستربس مع ورك ودبوس فرايد تشكن، ثومية، سبايسي، بطاطس، عيش محمص',230],
+ ['برنس بوب','Prince Pop','2 ساندوتش كايزر شاورما مع 3 قطع فرايد تشكن، ثومية، سبايسي، بطاطس، عيش محمص',220]]],
+['pizza','بيتزا بوب وان','Pizza Pop One','🍕','إضافة حشو للأطراف: كبير 50 · وسط 40 · صغير 30 جنيه · جميع أنواع البيتزا بالشوفان وزيت الزيتون',[
+ ['بيتزا بوب شامبيونيني','Champignon','صلصة، موزاريلا، كرات اللحم، زيتون، فلفل، صوص ديناميت، أوريجانو',PZ(230,180,140)],
+ ['بيتزا بوب موندو','Mondo','صلصة، موزاريلا، سجق، بصل، زيتون، صوص تارتار',PZ(230,160,120)],
+ ['بيتزا بوب مارغريتا','Margherita','صلصة، موزاريلا، أوريجانو',PZ(190,145,100)],
+ ['بيتزا بوب تورماني','Tormani','صلصة، موزاريلا، هوت دوج، مشروم، فلفل، أوريجانو',PZ(220,165,120)],
+ ['بيتزا بوب الفريدو','Alfredo','صلصة، موزاريلا، 3 أنواع لحوم مدخنة، فلفل، زيتون، أوريجانو',PZ(220,165,120)],
+ ['بيتزا بوب بيبروني','Pepperoni','صلصة، موزاريلا، سلامي، بيبروني، مشروم، فلفل، زيتون، أوريجانو',PZ(220,165,120)],
+ ['بيتزا بوب سوبريم','Supreme','صلصة، موزاريلا، بيبروني، مشروم، فلفل، زيتون، صوص بوب وان',PZ(220,165,120)],
+ ['بيتزا بوب باربكيو','BBQ','صلصة، موزاريلا، قطع فراخ، مشروم، صوص باربكيو',PZ(220,165,120)],
+ ['بيتزا بوب بيزارو','Pizzaro','ثومية، موزاريلا، زيتون، بسطرمة، أوريجانو',PZ(220,165,120)],
+ ['بيتزا بوب رانش','Ranch','صلصة، موزاريلا، قطع فراخ، صوص رانش، أوريجانو',PZ(220,165,120)],
+ ['بيتزا بوب لايت تشيز','Light Cheese','صلصة، 4 أنواع من الجبن، زيتون، أوريجانو',PZ(220,165,120)],
+ ['بيتزا بوب فور سيزون','Four Seasons','صلصة، موزاريلا، طماطم، فلفل، زيتون، أوريجانو',PZ(195,150,105)],
+ ['بيتزا بوب شاورما فراخ','Chicken Shawarma','صلصة، موزاريلا، مشروم، فلفل، شاورما فراخ، أوريجانو',PZ(230,170,125)],
+ ['بيتزا بوب شاورما لحمة','Beef Shawarma','صلصة، موزاريلا، مشروم، فلفل، شاورما لحمة، أوريجانو',PZ(235,185,135)],
+ ['بيتزا بوب صيامي','Siami','صلصة، موزاريلا، مشروم، فلفل، زيتون، بطاطس',PZ(190,150,105)],
+ ['بيتزا بوب هالبينو','Halapeno','صلصة، موزاريلا، شرائح هالبينو، بصل، فلفل',PZ(220,165,120)],
+ ['بيتزا بوب وان','Pop One','صلصة، موزاريلا، بصل مكرمل، مشروم، قطع شيدر',PZ(225,175,125)],
+ ['بيتزا بوب تكساس','Texas','صلصة، موزاريلا، شرائح لحم، صوص تكساس',PZ(235,185,140)],
+ ['بيتزا بوب سي فود (جديد)','Sea Food','صلصة، موزاريلا، جمبري، كابوريا',PZ(235,170,125)],
+ ['بيتزا بوب جامبريتو (جديد)','Gambrito','صلصة، موزاريلا، جمبري',PZ(250,185,135)]]],
+['salad','السلطات','Pop Salad','🥗','',[
+ ['سلطة سيزار','Caesar Salad','شرائح دجاج مع صوص السيزر وتوست محمص مع الخس وجبنة البارميزان',70],
+ ['سلطة ذرة','Corn Salad','ذرة صفراء مع فلفل ألوان والصوص الأبيض الكريمي',65],
+ ['كول سلو','Cole Slaw','الملفوف الفرنسي مع الجزر والوايت سويت دريسنج',35],
+ ['سلطة بوب وان','Pop One Salad','مكرونة مع شرائح السموك تركي والزيتون والفلفل الأخضر وسويت دريسنج',60],
+ ['سلطة إيطاليانو','Italiano Salad','مكرونة مع شرائح السلامي والذرة الصفراء والفلفل الألوان وريد دريسنج',60],
+ ['هوت باستا','Hot Pasta','مكرونة مع شرائح السموك تركي والمشروم والفلفل الألوان وبوب وان دريسنج',60]]],
+['popway','بوب واي','Pop Way Sandwiches','🌭','',[
+ ['تشيز حلوم','Cheese Halloumi','حلوم + زيتون',35],['تشيز شيدر','Cheese Cheddar','شيدر + موزاريلا',40],
+ ['سجق','Sausage','ثومية + مخلل',60],['موزاريلا','Mozzarella','موزاريلا + زيتون',35],
+ ['بسطرمة','Pastrami','طماطم + مخلل + خس',60],['رومي مدخن','Smoked Roumi','مسطردة + طماطم + خس',55],
+ ['لانشون','Luncheon','صوص تكساس + طماطم + مخلل + خس',50],['هوت دوج','Hot Dog','مايونيز + مسطردة + طماطم + كاتشب + خس',55],
+ ['بوكس الترويقة','Breakfast Box','4 سندوتشات مختلفة',200]]],
+['potato','ركن البطاطس','Potato Corner','🍟','',[
+ ['ساندوتش فرنساوي','French Sandwich','',40],['ساندوتش صاج','Saj Sandwich','',40],['ساندوتش لبناني','Lebanese Sandwich','',35],
+ ['ساندوتش فرنساوي مع جبنة','French with Cheese','',53],['ساندوتش صاج مع جبنة','Saj with Cheese','',53],
+ ['إضافة صوص (للساندوتش)','Extra Sauce','',8],['إضافة أي صوص على الباكيت','Packet Sauce','',12],['إضافة صوص شيدر على الباكيت','Packet Cheddar Sauce','',17],
+ ['باكيت بطاطس كرينكل','Crinkle Fries Packet','',35],['علبة بطاطس مع فراخ مكسيكي','Fries with Mexican Chicken','',75],['برك بالجبنة (3 قطع)','Cheese Burek','',35]]],
+['oriental','الوجبات الشرقية','Pop Oriental Meal','🍋','',[
+ ['شرائح دجاج مع الليمون','Lemon Chicken Slices','مكعبات بطاطس + مشروم + كايزر + جزر + بسلة + ثومية + سبايسي + بطاطس',200]]],
+['kids','وجبات الأطفال','Kids Meal','🧸','مع كل وجبة لعبة مميزة وعصير',[
+ ['تشكن برجر','Chicken Burger Kids','',135],['ناجيت','Nuggets','',135],['بيف برجر','Beef Burger Kids','',135],['كريسبي','Crispy','',145]]],
+['fish','أسماك بوب وان','Fish Corner','🐟','',[
+ ['فليتو باي','Filito Bay','قطعة من السمك الفيليه بصوص التارتار الكريمي وصوص الكوكتيل مع الخس',120],
+ ['فليتو فيش رايز','Filito Fish Rice','3 قطع فيليه سمك مقلي مع الأرز وصوص التارتار والعيش المحمص',155],
+ ['وجبة سمك فيليه','Fish Fillet Meal','بطاطس، صوص التارتار، طحينة',150],['نصف كيلو سمك فيليه','Half Kilo Fillet','أرز، صوص التارتار، طحينة',240],['كيلو سمك فيليه','Kilo Fillet','أرز، صوص التارتار، طحينة',450]]],
+['sauces','الصوصات','Sauces','🥣','سويت شيلي · رانش · ماك · أوري سويت · باربكيو · ديب تشيز · مستردة · صوص بوب وان · مشروم · بيج تيستي · ديناميت · هوت صوص · كوكتيل · تارتار · هاني مستردة · شيدر · ثومية · تكساس',[
+ ['إضافة صوص','Extra Sauce','',9],['إضافة صوص شيدر','Extra Cheddar Sauce','',12],['علبة الصوص','Sauce Cup','',14],
+ ['علبة الثومية','Garlic Cup','',12],['علبة الثومية السبايسي','Spicy Garlic Cup','',12],['علبة الشيدر','Cheddar Cup','',19]]],
+['drinks','المشروبات','Drinks','🥤','',[
+ ['مياه صغيرة','Small Water','',6],['مياه كبيرة','Large Water','',10],['كانز','Can','',18]]]
+];
+const PH='https://i.postimg.cc/',XI={'بسطرمة':'2jP7cWQ4/bstrmt','تشيز حلوم':'ryvNn41n/tshyz-hlwm','رومي مدخن':'qB9xbKsj/rwmy-mdkhn','سجق':'fW6f2dcr/sjq','لانشون':'m2CN0rVG/lanshwn','بوكس الترويقة':'y6wyQRmf/bwks-ftar','بوكس شاورما 4 كايزر':'HWf9ZMw9/bwks-shawrma-kayzr','بوكس شاورما 6 كايزر':'HWf9ZMw9/bwks-shawrma-kayzr','سندوتش شاورما كايزر':'hPTbHGsb/shawrma-kayzr','سندوتش شاورما كايزر اكس لارج':'hPTbHGsb/shawrma-kayzr','فتة مكسيكانو':'L6LBrsvR/ftt','فتة شاورما فراخ':'ncBY6L2W/ftt-shawrma-djaj','فتة ستربس':'m2CN0rjJ/ftt-krysby','فتة شاورما لحمة':'RVKQj0db/ftt-lhm','فتة بوب وان شاورما مع مكسرات':'ncBY6LTV/ftt-myks-mksrat'},XS={pizza:'dtrmz066/bytza',cheetos:'0NMNBzdY/bwks-shytws'},XM=['65nLDQzt/marya-lhm','VNxNQzDF/marya-djaj'],MN=['ماريا بوب وان شاورما','ماريا بوب وان هالبينو','ماريا بوب وان موزاريلا'];
+const src=(x,i)=>{x=Array.isArray(x)?x[i]||x[0]:x;return /^https?:/.test(x)?x:(x.startsWith('i/')?PH+x.slice(2)+'.jpg':I+x+'.jpg')};
+const $=s=>document.querySelector(s),main=$('#main'),tabs=$('#tabs');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const vs=p=>Array.isArray(p)?p:[['',p]];
+const favs=new Set(JSON.parse((()=>{try{return localStorage.getItem('popone_fav')}catch(e){return null}})()||'[]'));
+function card(it,emoji,sid,k){
+ const [n,en,d,p,img]=it,v=vs(p);
+ return `<article class="card" data-k="${sid}-${k}"><div class="im"><button class="heart${favs.has(sid+'-'+k)?' on':''}" type="button" data-f aria-label="مفضلة">♥</button>${img?`<img src="${src(img,0)}" alt="${esc(n)}" loading="lazy" referrerpolicy="no-referrer"${/^i\//.test(Array.isArray(img)?img[0]:img)?' class="ph"':''}>`:emoji}</div><div class="bd"><h3>${esc(n)}</h3>${en?`<div class="en">${esc(en)}</div>`:''}${d?`<div class="ds">${esc(d)}</div>`:'<div class="ds"></div>'}`+
+ (v.length>1?`<div class="chips">${v.map((x,i)=>`<button type="button" data-v="${i}" class="${i?'':'on'}">${x[0]}</button>`).join('')}</div>`:'')+
+ `<div class="row2"><b class="price">${v[0][1]} ج.م</b><button class="add" type="button">🛒 أضف للسلة</button></div></div></article>`;
+}
+const ALL={};let h='',t='';
+const secs=[['offers','العروض','Pop One Offers','🔥','',OFFERS],...S];
+secs.forEach(([id,ar,en,em,nt,items],si)=>{
+ items.forEach(it=>{const o=MN.includes(it[0])?XM:(XI[it[0]]||XS[id]);if(o)it[4]=Array.isArray(o)?o.map(x=>'i/'+x):'i/'+o});
+ h+=`<section class="sec${si?'':' on'}" id="${id}"><h2>${ar}<small>${en}</small></h2>${nt?`<div class="nt">${esc(nt)}</div>`:''}<div class="grid">`+items.map((it,k)=>{ALL[id+'-'+k]=it;return card(it,em,id,k)}).join('')+`</div></section>`;
+ t+=`<li><button class="${si?'':'hot on'}" data-s="${id}">${si?'':'🔥 '}${ar}</button></li>`;
+});
+h+='<section class="sec" id="favs"><h2>المفضلة<small>Favorites</small></h2><div class="none"></div><div class="grid"></div></section><section class="sec" id="res"><h2>نتائج البحث<small>Search</small></h2><div class="none"></div><div class="grid"></div></section>';
+t=t.replace('</li>','</li><li><button data-s="favs">❤️ المفضلة</button></li>');
+main.innerHTML=h;tabs.innerHTML=t;
+function fill(id,keys,msg){const s=$('#'+id);s.querySelector('.none').textContent=keys.length?'':msg;s.querySelector('.none').style.display=keys.length?'none':'';
+ s.querySelector('.grid').innerHTML=keys.map(k=>{const[sid]=k.split('-'),sec=secs.find(x=>x[0]===sid);return card(ALL[k],sec[3],sid,k.slice(sid.length+1))}).join('')}
+function show(id){
+ if(id==='favs')fill('favs',[...favs].filter(k=>ALL[k]),'لسه مضفتش أصناف للمفضلة، اضغط على ♥ في أي صنف');
+ document.querySelectorAll('.sec').forEach(e=>e.classList.toggle('on',e.id===id));
+ tabs.querySelectorAll('button').forEach(b=>{const on=b.dataset.s===id;b.classList.toggle('on',on);if(on)b.scrollIntoView({inline:'center',block:'nearest'})});
+ const top=main.getBoundingClientRect().top+scrollY-110;if(scrollY>top)scrollTo({top});
+}
+tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b){$('#q').value='';last=b.dataset.s;show(last)}});
+// cart
+let cart=[];try{cart=JSON.parse(localStorage.getItem('popone_cart')||'[]')}catch(e){}
+const money=n=>n+' ج.م',total=()=>cart.reduce((s,x)=>s+x.p*x.q,0),count=()=>cart.reduce((s,x)=>s+x.q,0);
+function save(){try{localStorage.setItem('popone_cart',JSON.stringify(cart))}catch(e){}render()}
+function render(){
+ $('#cn').textContent=count();const c=$('#cbar');c.classList.toggle('on',count()>0);
+ $('#cbn').textContent='🛒 السلة ('+count()+')';$('#cbt').textContent=money(total());
+ $('#cl').innerHTML=cart.length?cart.map((x,i)=>`<div class="ln"><div class="t">${esc(x.n)}${x.v?`<small>${esc(x.v)}</small>`:''}<small>${money(x.p)}</small></div><div class="qty"><button type="button" data-q="${i}:1" aria-label="زيادة">+</button><b>${x.q}</b><button type="button" data-q="${i}:-1" aria-label="نقص">−</button></div></div>`).join(''):'<div class="empty">السلة فاضية، ضيف أصناف من المنيو 🍗</div>';
+ $('#cs').textContent=money(total());$('#ct').style.display=$('#co').style.display=cart.length?'':'none';
+}
+function addItem(k,vi,q){
+ const it=ALL[k],v=vs(it[3])[vi],ex=cart.find(x=>x.n===it[0]&&x.v===v[0]);
+ ex?ex.q+=q:cart.push({n:it[0],v:v[0],p:v[1],q});save();
+ toast('✓ اتضاف للسلة: '+it[0]);const c=$('#cn');c.classList.remove('bump');void c.offsetWidth;c.classList.add('bump');
+}
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('on'),1600)}
+function setFav(k){favs.has(k)?favs.delete(k):favs.add(k);try{localStorage.setItem('popone_fav',JSON.stringify([...favs]))}catch(e){}
+ document.querySelectorAll('.card[data-k="'+k+'"] .heart').forEach(h=>h.classList.toggle('on',favs.has(k)));
+ if($('#favs').classList.contains('on'))show('favs');else toast(favs.has(k)?'❤️ اتضاف للمفضلة':'اتشال من المفضلة')}
+function openDetail(k){
+ const it=ALL[k],sid=k.split('-')[0],em=secs.find(x=>x[0]===sid)[3],v=vs(it[3]);let vi=0,q=1;
+ $('#dt').textContent=it[0];
+ const d=$('#db');
+ d.innerHTML=`<div class="dim">${it[4]?`<img src="${src(it[4],0)}" alt="${esc(it[0])}" referrerpolicy="no-referrer"${/^i\//.test(Array.isArray(it[4])?it[4][0]:it[4])?' class="ph"':''}>`:em}</div>${it[1]?`<div class="en">${esc(it[1])}</div>`:''}${it[2]?`<p>${esc(it[2])}</p>`:''}${v.length>1?`<div class="chips">${v.map((x,i)=>`<button type="button" data-v="${i}" class="${i?'':'on'}">${x[0]} · ${x[1]} ج.م</button>`).join('')}</div>`:''}<div class="dtot"><div class="qty big"><button type="button" data-d="1">+</button><b id="dq">1</b><button type="button" data-d="-1">−</button></div><button class="add" type="button" id="da"></button></div>`;
+ const up=()=>{$('#dq').textContent=q;$('#da').textContent='🛒 أضف · '+v[vi][1]*q+' ج.م'};up();
+ d.onclick=e=>{const c=e.target.closest('.chips button'),n=e.target.closest('[data-d]');
+  if(c){vi=+c.dataset.v;const di=d.querySelector('.dim img');if(di&&Array.isArray(it[4]))di.src=src(it[4],vi);d.querySelectorAll('.chips button').forEach(b=>b.classList.toggle('on',b===c));up()}
+  else if(n){q=Math.max(1,q+ +n.dataset.d);up()}
+  else if(e.target.closest('#da')){addItem(k,vi,q);closeAll()}};
+ $('#dm').classList.add('on');
+}
+main.addEventListener('click',e=>{
+ const card=e.target.closest('.card');if(!card)return;const k=card.dataset.k;
+ if(e.target.closest('[data-f]')){setFav(k);return}
+ const ch=e.target.closest('.chips button');
+ if(ch){card.querySelectorAll('.chips button').forEach(b=>b.classList.toggle('on',b===ch));
+  card.querySelector('.price').textContent=vs(ALL[k][3])[+ch.dataset.v][1]+' ج.م';
+  const im=card.querySelector('.im img'),a=ALL[k][4];if(im&&Array.isArray(a))im.src=src(a,+ch.dataset.v);return}
+ if(e.target.closest('.add')){const on=card.querySelector('.chips .on');addItem(k,on?+on.dataset.v:0,1);
+  const b=e.target.closest('.add');b.textContent='✓ اتضاف';setTimeout(()=>b.textContent='🛒 أضف للسلة',900);return}
+ openDetail(k);
+});
+// search
+let last='offers';
+$('#q').addEventListener('input',e=>{
+ const v=e.target.value.trim();
+ if(!v){show(last);return}
+ const n=x=>x.replace(/[ًٌٍَُِّْ]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي').toLowerCase(),w=n(v);
+ const keys=Object.keys(ALL).filter(k=>n(ALL[k].slice(0,3).join(' ')).includes(w));
+ fill('res',keys,'مفيش نتائج لـ "'+v+'"، جرّب كلمة تانية');
+ document.querySelectorAll('.sec').forEach(x=>x.classList.toggle('on',x.id==='res'));
+ tabs.querySelectorAll('button').forEach(b=>b.classList.remove('on'));
+});
+const cm=$('#cm'),om=$('#om'),er=$('#er');let type='توصيل';
+function closeAll(){cm.classList.remove('on');om.classList.remove('on');$('#dm').classList.remove('on')}
+document.addEventListener('click',e=>{
+ if(e.target.closest('[data-cart]')){render();cm.classList.add('on');return}
+ const q=e.target.closest('[data-q]');
+ if(q){const[i,d]=q.dataset.q.split(':').map(Number);cart[i].q+=d;if(cart[i].q<1)cart.splice(i,1);save();return}
+ if(e.target.closest('[data-close]')||e.target===cm||e.target===om||e.target===$('#dm'))closeAll();
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+$('#co').addEventListener('click',()=>{
+ $('#sm').innerHTML=cart.map(x=>`<div><span>${x.q} × ${esc(x.n)}${x.v?' ('+esc(x.v)+')':''}</span><b>${money(x.p*x.q)}</b></div>`).join('')+`<div><b>الإجمالي (بدون التوصيل)</b><b>${money(total())}</b></div>`;
+ cm.classList.remove('on');om.classList.add('on');
+});
+$('#seg').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;type=b.dataset.t;
+ $('#seg').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));$('#adr').style.display=type==='توصيل'?'':'none'});
+$('#go').addEventListener('click',()=>{
+ const n=$('#fn'),p=$('#fp'),a=$('#fa'),o=$('#fo');
+ [n,p,a].forEach(x=>x.classList.remove('bad'));er.textContent='';
+ const ph=p.value.replace(/\D/g,'');let m='';
+ if(!n.value.trim()){n.classList.add('bad');m='اكتب اسمك'}
+ else if(!/^01[0-9]{9}$/.test(ph)){p.classList.add('bad');m='اكتب رقم موبايل صحيح (11 رقم)'}
+ else if(type==='توصيل'&&!a.value.trim()){a.classList.add('bad');m='اكتب عنوان التوصيل'}
+ if(m){er.textContent=m;return}
+ const L=['🧡 طلب جديد من موقع بوب وان','','نوع الطلب: '+type,'الاسم: '+n.value.trim(),'الموبايل: '+ph,...(type==='توصيل'?['العنوان: '+a.value.trim()]:[]),'','الطلب:',
+  ...cart.map(x=>`• ${x.q} × ${x.n}${x.v?' ('+x.v+')':''} = ${x.p*x.q} ج.م`),'','الإجمالي (بدون التوصيل): '+total()+' ج.م',...(o.value.trim()?['','ملاحظات: '+o.value.trim()]:[])];
+ window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
+});
+render();
+</script>
+</body>
+</html>
