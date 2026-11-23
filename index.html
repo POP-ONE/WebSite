@@ -5,10 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#F26A10">
 <title>بوب وان | Pop One</title>
-<meta name="description" content="بوب وان - أول فرايد تشكن شاورما في مصر. شوف المنيو والعروض واطلب على واتساب.">
+<meta name="description" content="بوب وان - أول فرايد تشكن شاورما في مصر. فرايد تشكن، شاورما، بيتزا، برجر وعروض مميزة. شوف المنيو واطلب على واتساب - فرع أكتوبر الحصري.">
 <meta property="og:title" content="بوب وان | Pop One">
 <meta property="og:description" content="أول فرايد تشكن شاورما في مصر - المنيو والعروض واطلب على واتساب">
 <meta property="og:image" content="https://i.postimg.cc/7YrGpnf1/hero.jpg">
+<meta property="og:locale" content="ar_EG">
+<meta property="og:type" content="restaurant.restaurant">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://i.postimg.cc/7YrGpnf1/hero.jpg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pop One">
+<link rel="apple-touch-icon" href="https://i.postimg.cc/8PgJqmj7/favicon.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "بوب وان - Pop One", "alternateName": "Pop One", "description": "أول فرايد تشكن شاورما في مصر", "image": "https://i.postimg.cc/7YrGpnf1/hero.jpg", "servesCuisine": ["Fried Chicken", "Shawarma", "Pizza", "Burgers"], "telephone": ["15443", "+201200008000"], "address": {"@type": "PostalAddress", "streetAddress": "الحصري - مجمع الأمريكية - أبراج علي الدين", "addressLocality": "6th of October City", "addressCountry": "EG"}, "acceptsReservations": false, "potentialAction": {"@type": "OrderAction", "target": "https://wa.me/201200008000"}}</script>
 <link rel="icon" href="https://i.postimg.cc/8PgJqmj7/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
@@ -75,8 +84,8 @@ footer{max-width:1200px;margin:10px auto 0;padding:0 14px}
 .seg button{padding:10px;border-radius:12px;background:var(--wh);border:2px solid #F7C79A;font-weight:700;font-size:1rem}
 .seg button.on{background:var(--or);border-color:var(--or);color:var(--wh)}
 label{display:block;font-weight:700;font-size:.9rem;margin:10px 0 4px}
-input,textarea{width:100%;font:inherit;padding:10px 12px;border-radius:12px;border:2px solid #F7C79A;background:var(--wh);color:var(--ink)}
-input:focus,textarea:focus{border-color:var(--or);outline:0}
+input,textarea,select{width:100%;font:inherit;padding:10px 12px;border-radius:12px;border:2px solid #F7C79A;background:var(--wh);color:var(--ink)}
+input:focus,textarea:focus,select:focus{border-color:var(--or);outline:0}
 .bad{border-color:var(--red)!important}
 .err{color:var(--red);font-size:.85rem;min-height:1.2em;margin-top:6px}
 .send{width:100%;margin-top:14px;justify-content:center;font-size:1.05rem;padding:13px;background:#25D366;color:var(--wh);box-shadow:0 3px 0 #128C4A}
@@ -94,7 +103,7 @@ input:focus,textarea:focus{border-color:var(--or);outline:0}
 .card .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff}
 .card .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
 .card h3{font-size:1.1rem;font-weight:900;line-height:1.35}
-.card .en{font-size:.8rem;color:#8a6a55;direction:ltr;text-align:right}
+.card .en{font-size:.8rem;color:#8a6a55;text-align:start}
 .card .ds{font-size:.88rem;color:#6b4a38;flex:1}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
 .chips button{background:var(--cream);border:2px solid #F7C79A;border-radius:50px;padding:3px 12px;font-weight:700;font-size:.85rem;color:var(--ink)}
@@ -117,7 +126,7 @@ input:focus,textarea:focus{border-color:var(--or);outline:0}
 .sum div{display:flex;justify-content:space-between;gap:8px;padding:2px 0}
 
 .srch{max-width:1200px;margin:auto;padding:14px 14px 0;position:relative}
-.srch input{padding:13px 46px 13px 16px;border-radius:50px;border:0;font-size:1rem;box-shadow:0 4px 14px rgba(120,40,0,.3)}
+.srch input{padding:13px 16px;padding-inline-end:46px;border-radius:50px;border:0;font-size:1rem;box-shadow:0 4px 14px rgba(120,40,0,.3)}
 .srch span{position:absolute;inset-inline-end:30px;top:26px;font-size:1.1rem;pointer-events:none}
 .card{cursor:pointer;transition:transform .2s,box-shadow .2s}
 .card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(120,40,0,.45)}
@@ -131,7 +140,7 @@ input:focus,textarea:focus{border-color:var(--or);outline:0}
 .hero-in h1{animation:pop .7s cubic-bezier(.2,1.4,.4,1) both}
 @keyframes pop{from{opacity:0;transform:scale(.85) translateY(14px)}}
 .dim{aspect-ratio:16/10;border-radius:16px;margin-bottom:12px;background:linear-gradient(rgba(242,106,16,.78),rgba(242,106,16,.78)),url(https://i.postimg.cc/yYCgwykW/pattern.jpg) center/cover;display:grid;place-items:center;font-size:4rem;position:relative;overflow:hidden}.dim img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff}
-.dm .en{font-size:.85rem;color:#8a6a55;direction:ltr;text-align:right}.dm p{margin:8px 0;color:#6b4a38}
+.dm .en{font-size:.85rem;color:#8a6a55;text-align:start}.dm p{margin:8px 0;color:#6b4a38}
 .dm .chips button{padding:6px 16px;font-size:.95rem}
 .dtot{display:flex;align-items:center;justify-content:space-between;margin-top:14px;gap:10px}
 .dtot .add{flex:1;font-size:1.05rem;padding:12px}
@@ -140,6 +149,23 @@ input:focus,textarea:focus{border-color:var(--or);outline:0}
 
 nav button{transition:transform .15s}nav button:active{transform:scale(.93)}
 .card .im img.ph,.dim img.ph{object-fit:cover}
+
+.hdr-r{display:flex;gap:8px;align-items:center}
+.ghost{background:rgba(255,255,255,.18);color:#fff;box-shadow:none;border:2px solid rgba(255,255,255,.75);padding:5px 14px}
+.ob{display:inline-block;padding:4px 16px;border-radius:50px;font-weight:700;font-size:.9rem;color:#fff;background:#1e9e4a;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.ob.n{background:#8a1c1c}
+.bdg{position:absolute;top:10px;inset-inline-end:10px;z-index:2;background:#1e9e4a;color:#fff;font-weight:900;font-size:.78rem;padding:2px 12px;border-radius:50px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.bdg.hot{background:var(--red)}
+.card.na{opacity:.6}.card.na .add{background:#999;box-shadow:none;cursor:not-allowed}
+.up{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.up button{background:var(--wh);border:2px dashed var(--or);border-radius:50px;padding:5px 12px;font-weight:700;font-size:.85rem;color:var(--ink)}
+.cp{display:flex;gap:8px;margin-top:12px}.cp input{flex:1}.cp button{padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;font-weight:700}
+.tr{display:flex;justify-content:space-between;padding:2px 0}
+.tr.tot{font-weight:900;font-size:1.2rem;padding:12px 0 4px}
+.ft-btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px}
+.ft-btns .pill{background:var(--cream);color:var(--ink);box-shadow:none;border:2px solid #F7C79A;font-size:.9rem}
+@media(max-width:420px){.bar .pill{padding:6px 12px;font-size:.85rem}.bar .lg{height:28px}.bar{gap:8px}.hdr-r{gap:6px}}
+html[dir=ltr] .ln .t,html[dir=ltr] .card .bd{text-align:left}
 </style>
 </head>
 <body>
@@ -147,54 +173,58 @@ nav button{transition:transform .15s}nav button:active{transform:scale(.93)}
 
 <header><div class="bar">
   <a href="#" aria-label="بوب وان"><svg class="lg" viewBox="0 0 926 185" role="img" aria-label="Pop One"><use href="#logo"/></svg></a>
-  <button class="pill hdr-cart" type="button" data-cart>🛒 السلة <span class="badge" id="cn">0</span></button>
+  <div class="hdr-r"><button class="pill ghost" id="lg" type="button" data-lang aria-label="Language">EN</button>
+  <button class="pill hdr-cart" type="button" data-cart>🛒 <span data-t="cart">السلة</span> <span class="badge" id="cn">0</span></button></div>
 </div></header>
 
 <section class="hero" aria-label="بوب وان">
   <div class="hero-in">
     <svg class="hl" viewBox="0 0 926 185" role="img" aria-label="Pop One"><use href="#logo"/></svg>
-    <h1>أول فرايد تشكن شاورما في مصر</h1>
+    <h1 data-t="tag">أول فرايد تشكن شاورما في مصر</h1>
+    <div class="ob" id="ob" style="display:none"></div>
   </div>
 </section>
 
-<nav aria-label="أقسام المنيو"><ul id="tabs"></ul></nav>
-<div class="srch"><input id="q" type="search" placeholder="دوّر على صنف... (برجر، بيتزا، شاورما)" aria-label="بحث"><span>🔍</span></div>
+<nav aria-label="Menu"><ul id="tabs"></ul></nav>
+<div class="srch"><input id="q" type="search" data-tp="srch" aria-label="Search"><span>🔍</span></div>
 <main id="main"></main>
 
 <footer>
   <div class="ft-card">
-    <div><h3>اطلب من هنا</h3><a href="tel:15443">15443</a><br><a href="tel:01200008000">01200008000</a></div>
-    <div><h3>واتساب</h3><a href="https://wa.me/201200008000" target="_blank" rel="noopener">01200008000</a></div>
-    <div><h3>الفرع</h3><p>فرع أكتوبر: الحصري - مجمع الأمريكية - أبراج علي الدين</p></div>
+    <div><h3 data-t="f1">اطلب من هنا</h3><a href="tel:15443">15443</a><br><a href="tel:01200008000">01200008000</a></div>
+    <div><h3 data-t="f2">واتساب</h3><a href="https://wa.me/201200008000" target="_blank" rel="noopener">01200008000</a></div>
+    <div><h3 data-t="f3">الفرع</h3><p data-t="branch"></p></div>
   </div>
-  <p class="note">الأسعار شاملة ضريبة القيمة المضافة · يضاف 12% خدمة داخل الصالة</p>
+  <div class="ft-btns"><a class="pill" href="tel:15443" data-t="call"></a><a class="pill" id="mp" target="_blank" rel="noopener" data-t="map"></a><button class="pill" id="ins" type="button" data-install data-t="inst"></button></div>
+  <p class="note" data-t="note"></p>
 </footer>
 
 <button class="cbar" id="cbar" type="button" data-cart><span id="cbn"></span><span id="cbt"></span></button>
-
-<div class="toast" id="toast"></div>
-<div class="modal" id="dm" role="dialog" aria-label="تفاصيل الصنف"><div class="sheet dm"><h3><span id="dt"></span><button class="x" type="button" data-close aria-label="إغلاق">✕</button></h3><div id="db"></div></div></div>
-<div class="modal" id="cm" role="dialog" aria-label="السلة"><div class="sheet">
-  <h3>🛒 سلة الطلبات <button class="x" type="button" data-close aria-label="إغلاق">✕</button></h3>
-  <div id="cl"></div>
-  <div class="tot" id="ct"><span>الإجمالي</span><span id="cs"></span></div>
-  <div class="hint">الإجمالي بدون مصاريف التوصيل. هنأكد معاك التفاصيل على واتساب.</div>
-  <button class="pill send" type="button" id="co" style="background:var(--red);box-shadow:0 3px 0 #7d1015">متابعة الطلب</button>
+<div class="toast" id="toast" role="status"></div>
+<div class="modal" id="dm" role="dialog" aria-modal="true"><div class="sheet dm"><h3><span id="dt"></span><button class="x" type="button" data-close aria-label="Close">✕</button></h3><div id="db"></div></div></div>
+<div class="modal" id="cm" role="dialog" aria-modal="true"><div class="sheet">
+  <h3><span data-t="cartT"></span><button class="x" type="button" data-close aria-label="Close">✕</button></h3>
+  <div id="cl"></div><div id="upw"></div>
+  <div class="cp" id="cpw"><input id="cpi" data-tp="cpn" autocomplete="off"><button type="button" id="cpb" data-t="apply"></button></div>
+  <div id="cs"></div>
+  <div class="hint" id="hnt" data-t="hint"></div>
+  <button class="pill send" type="button" id="co" data-t="cont" style="background:var(--red);box-shadow:0 3px 0 #7d1015"></button>
 </div></div>
-
-<div class="modal" id="om" role="dialog" aria-label="إتمام الطلب"><div class="sheet">
-  <h3>إتمام الطلب <button class="x" type="button" data-close aria-label="إغلاق">✕</button></h3>
+<div class="modal" id="om" role="dialog" aria-modal="true"><div class="sheet">
+  <h3><span data-t="ck"></span><button class="x" type="button" data-close aria-label="Close">✕</button></h3>
   <div class="sum" id="sm"></div>
-  <div class="seg" id="seg"><button type="button" data-t="توصيل" class="on">🛵 توصيل</button><button type="button" data-t="استلام من الفرع">🏪 استلام من الفرع</button></div>
-  <label for="fn">الاسم</label><input id="fn" autocomplete="name">
-  <label for="fp">رقم الموبايل</label><input id="fp" type="tel" inputmode="numeric" placeholder="01xxxxxxxxx" autocomplete="tel">
-  <div id="adr"><label for="fa">العنوان بالتفصيل</label><input id="fa" autocomplete="street-address" placeholder="المنطقة - الشارع - رقم العمارة - الدور - علامة مميزة"></div>
-  <label for="fo">ملاحظات على الطلب</label><textarea id="fo" rows="2" placeholder="اختياري: من غير صوص، حار..."></textarea>
+  <div class="seg" id="seg"><button type="button" data-ty="توصيل" class="on" data-t="deliv"></button><button type="button" data-ty="استلام من الفرع" data-t="pick"></button></div>
+  <label for="fn" data-t="name"></label><input id="fn" autocomplete="name">
+  <label for="fp" data-t="phone"></label><input id="fp" type="tel" inputmode="numeric" placeholder="01xxxxxxxxx" autocomplete="tel">
+  <div id="zw" style="display:none"><label for="fz" data-t="zone"></label><select id="fz"></select></div>
+  <div id="adr"><label for="fa" data-t="addr"></label><input id="fa" autocomplete="street-address" data-tp="addrph"></div>
+  <label for="fo" data-t="notes"></label><textarea id="fo" rows="2" data-tp="notesph"></textarea>
   <div class="err" id="er"></div>
-  <button class="pill send" type="button" id="go"><svg><use href="#wa"/></svg> ابعت الطلب على واتساب</button>
+  <button class="pill send" type="button" id="go"><svg><use href="#wa"/></svg> <span data-t="send"></span></button>
 </div></div>
 
 <script>
+
 const WA='201200008000', I='images/';
 const M=(l,f)=>[l&&['لحمة',l],f&&['فراخ',f]].filter(Boolean);
 const PZ=(l,m,s)=>[['كبير',l],['وسط',m],['صغير',s]];
@@ -334,116 +364,204 @@ const S=[
 const PH='https://i.postimg.cc/',XI={'بسطرمة':'2jP7cWQ4/bstrmt','تشيز حلوم':'ryvNn41n/tshyz-hlwm','رومي مدخن':'qB9xbKsj/rwmy-mdkhn','سجق':'fW6f2dcr/sjq','لانشون':'m2CN0rVG/lanshwn','بوكس الترويقة':'y6wyQRmf/bwks-ftar','بوكس شاورما 4 كايزر':'HWf9ZMw9/bwks-shawrma-kayzr','بوكس شاورما 6 كايزر':'HWf9ZMw9/bwks-shawrma-kayzr','سندوتش شاورما كايزر':'hPTbHGsb/shawrma-kayzr','سندوتش شاورما كايزر اكس لارج':'hPTbHGsb/shawrma-kayzr','فتة مكسيكانو':'L6LBrsvR/ftt','فتة شاورما فراخ':'ncBY6L2W/ftt-shawrma-djaj','فتة ستربس':'m2CN0rjJ/ftt-krysby','فتة شاورما لحمة':'RVKQj0db/ftt-lhm','فتة بوب وان شاورما مع مكسرات':'ncBY6LTV/ftt-myks-mksrat'},XS={pizza:'dtrmz066/bytza',cheetos:'0NMNBzdY/bwks-shytws'},XM=['65nLDQzt/marya-lhm','VNxNQzDF/marya-djaj'],MN=['ماريا بوب وان شاورما','ماريا بوب وان هالبينو','ماريا بوب وان موزاريلا'];
 const IMGS={'it-bbq':'https://i.postimg.cc/ZKzB1xCN/it-bbq.jpg','it-beef':'https://i.postimg.cc/Dy3JtP8s/it-beef.jpg','it-cheeseito':'https://i.postimg.cc/9FHRvYrZ/it-cheeseito.jpg','it-chicken-burger':'https://i.postimg.cc/4NR7rQmp/it-chicken-burger.jpg','it-filito':'https://i.postimg.cc/3JQ4PFdg/it-filito.jpg','it-hallibeno':'https://i.postimg.cc/rF20vNK1/it-hallibeno.jpg','it-malebo':'https://i.postimg.cc/3JQ4PFdC/it-malebo.jpg','it-napoli':'https://i.postimg.cc/v8VxqNHH/it-napoli.jpg','it-popone-burger':'https://i.postimg.cc/8k6fK0Pz/it-popone-burger.jpg','it-popone-chicken':'https://i.postimg.cc/sfhG6NDx/it-popone-chicken.jpg','it-super-supreme':'https://i.postimg.cc/9X7w8nFz/it-super-supreme.jpg','it-texas':'https://i.postimg.cc/1RqVCj5t/it-texas.jpg','offer-gharbi':'https://i.postimg.cc/KcM3qHvk/offer-gharbi.jpg','offer-hotrick':'https://i.postimg.cc/449HLSNz/offer-hotrick.jpg','offer-maria':'https://i.postimg.cc/ZKzB1xCv/offer-maria.jpg','offer-mix':'https://i.postimg.cc/MKJMhmvM/offer-mix.jpg','offer-shawarma':'https://i.postimg.cc/G3yT75hY/offer-shawarma.jpg','oriental':'https://i.postimg.cc/59CQ7RNL/oriental.jpg'};
 const src=(x,i)=>{x=Array.isArray(x)?x[i]||x[0]:x;return /^https?:/.test(x)?x:(x.startsWith('i/')?PH+x.slice(2)+'.jpg':(IMGS[x]||I+x+'.jpg'))};
-const $=s=>document.querySelector(s),main=$('#main'),tabs=$('#tabs');
+const CFG={
+ hours:null,        // مثال: {open:'12:00',close:'02:00'}  (بتوقيت القاهرة)
+ blockClosed:false, // true = يمنع إرسال الطلب خارج المواعيد
+ zones:[],          // مثال: [['الحصري',20],['الشيخ زايد',35]]  (المنطقة، رسوم التوصيل)
+ coupons:{},        // مثال: {WELCOME10:{pct:10}, HELLO:{off:20}}
+ best:[],           // أسماء الأصناف "الأكثر طلباً"، مثال: ['بوكس ورك','نابولي']
+ unavail:[],        // أسماء الأصناف المتوقفة مؤقتاً
+ ga:'', pixel:'',   // Google Analytics (G-XXXX) / Meta Pixel ID
+ map:'https://www.google.com/maps/search/?api=1&query=Pop+One+Al+Hosary+American+Complex+6th+of+October'
+};
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],main=$('#main'),tabs=$('#tabs');
+const sj=(k,d)=>{try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}},ss=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let L=sj('popone_lang','ar'),cur='offers',type='توصيل',cart=sj('popone_cart',[]),coupon=null,zone=null,dp=null;
+const TX={ar:{cart:'السلة',tag:'أول فرايد تشكن شاورما في مصر',srch:'دوّر على صنف... (برجر، بيتزا، شاورما)',fav:'المفضلة',add:'🛒 أضف للسلة',added:'✓ اتضاف',cur:'ج.م',cartT:'🛒 سلة الطلبات',empty:'السلة فاضية، ضيف أصناف من المنيو 🍗',again:'🔁 اطلب تاني آخر طلب',up:'ضيف مع طلبك',cpn:'عندك كود خصم؟',apply:'تطبيق',cpok:'✓ تم تطبيق الكود',cpbad:'الكود غير صحيح',sub:'المجموع',disc:'الخصم',fee:'مصاريف التوصيل',tot:'الإجمالي',hint:'هنأكد معاك التفاصيل على واتساب.',cont:'متابعة الطلب',ck:'إتمام الطلب',deliv:'🛵 توصيل',pick:'🏪 استلام من الفرع',name:'الاسم',phone:'رقم الموبايل',addr:'العنوان بالتفصيل',addrph:'المنطقة - الشارع - رقم العمارة - الدور - علامة مميزة',zone:'المنطقة',zonesel:'اختار منطقتك',notes:'ملاحظات على الطلب',notesph:'اختياري: من غير صوص، حار...',send:'ابعت الطلب على واتساب',e_name:'اكتب اسمك',e_phone:'اكتب رقم موبايل صحيح (11 رقم)',e_addr:'اكتب عنوان التوصيل',e_zone:'اختار المنطقة',e_closed:'المطعم مقفول حالياً، الطلبات بتبدأ الساعة ',addt:'✓ اتضاف للسلة: ',favon:'❤️ اتضاف للمفضلة',favoff:'اتشال من المفضلة',favempty:'لسه مضفتش أصناف للمفضلة، اضغط على ♥ في أي صنف',nores:'مفيش نتائج لـ ',nores2:'، جرّب كلمة تانية',res:'نتائج البحث',favT:'المفضلة',new:'جديد',best:'🔥 الأكثر طلباً',na:'غير متاح',open:'🟢 مفتوح الآن',closed:'🔴 مقفول حالياً',opens:'يفتح',f1:'اطلب من هنا',f2:'واتساب',f3:'الفرع',branch:'فرع أكتوبر: الحصري - مجمع الأمريكية - أبراج علي الدين',note:'الأسعار شاملة ضريبة القيمة المضافة · يضاف 12% خدمة داخل الصالة',call:'📞 اتصل بينا',map:'📍 الموقع على الخريطة',inst:'📲 ثبّت الموقع على موبايلك',insth:'من قائمة المتصفح اختار "إضافة إلى الشاشة الرئيسية"',lang:'EN',sent:'اتفتح واتساب، ابعت الرسالة لإتمام الطلب'},
+en:{cart:'Cart',tag:'Egypt’s first fried chicken shawarma',srch:'Search the menu… (burger, pizza, shawarma)',fav:'Favorites',add:'🛒 Add to cart',added:'✓ Added',cur:'EGP',cartT:'🛒 Your order',empty:'Your cart is empty — add items from the menu 🍗',again:'🔁 Order your last order again',up:'Add to your order',cpn:'Have a coupon code?',apply:'Apply',cpok:'✓ Coupon applied',cpbad:'Invalid code',sub:'Subtotal',disc:'Discount',fee:'Delivery fee',tot:'Total',hint:'We’ll confirm the details with you on WhatsApp.',cont:'Continue',ck:'Checkout',deliv:'🛵 Delivery',pick:'🏪 Pick up',name:'Name',phone:'Mobile number',addr:'Full address',addrph:'Area - street - building - floor - landmark',zone:'Area',zonesel:'Choose your area',notes:'Order notes',notesph:'Optional: no sauce, spicy…',send:'Send order on WhatsApp',e_name:'Enter your name',e_phone:'Enter a valid 11-digit mobile number',e_addr:'Enter your delivery address',e_zone:'Choose your area',e_closed:'We’re closed right now. Orders start at ',addt:'✓ Added: ',favon:'❤️ Saved to favorites',favoff:'Removed from favorites',favempty:'No favorites yet — tap ♥ on any item',nores:'No results for ',nores2:'',res:'Search results',favT:'Favorites',new:'New',best:'🔥 Best seller',na:'Unavailable',open:'🟢 Open now',closed:'🔴 Closed',opens:'opens',f1:'Order by phone',f2:'WhatsApp',f3:'Branch',branch:'October branch: Al Hosary – American Complex – Ali Al Din Towers',note:'Prices include VAT · 12% service charge applies for dine-in',call:'📞 Call us',map:'📍 Find us on the map',inst:'📲 Install on your phone',insth:'Use your browser menu → “Add to Home Screen”',lang:'عربي',sent:'WhatsApp opened — send the message to place your order'}};
+const t=k=>(TX[L]&&TX[L][k])||TX.ar[k]||k;
+const VT={'لحمة':'Beef','فراخ':'Chicken','وسط':'Medium','كبير':'Large','صغير':'Small','سنجل':'Single','دبل':'Double'};
+const vl=x=>L==='ar'?x:(VT[x]||x.replace(/قطعة|قطع/,'pcs').replace('جم','g'));
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const vs=p=>Array.isArray(p)?p:[['',p]];
-const favs=new Set(JSON.parse((()=>{try{return localStorage.getItem('popone_fav')}catch(e){return null}})()||'[]'));
-function card(it,emoji,sid,k){
- const [n,en,d,p,img]=it,v=vs(p);
- return `<article class="card" data-k="${sid}-${k}"><div class="im"><button class="heart${favs.has(sid+'-'+k)?' on':''}" type="button" data-f aria-label="مفضلة">♥</button>${img?`<img src="${src(img,0)}" alt="${esc(n)}" loading="lazy" referrerpolicy="no-referrer"${/^i\//.test(Array.isArray(img)?img[0]:img)?' class="ph"':''}>`:emoji}</div><div class="bd"><h3>${esc(n)}</h3>${en?`<div class="en">${esc(en)}</div>`:''}${d?`<div class="ds">${esc(d)}</div>`:'<div class="ds"></div>'}`+
- (v.length>1?`<div class="chips">${v.map((x,i)=>`<button type="button" data-v="${i}" class="${i?'':'on'}">${x[0]}</button>`).join('')}</div>`:'')+
- `<div class="row2"><b class="price">${v[0][1]} ج.م</b><button class="add" type="button">🛒 أضف للسلة</button></div></div></article>`;
-}
-const ALL={};let h='',t='';
+const NEW=' (جديد)';
 const secs=[['offers','العروض','Pop One Offers','🔥','',OFFERS],...S];
-secs.forEach(([id,ar,en,em,nt,items],si)=>{
- items.forEach(it=>{const o=MN.includes(it[0])?XM:(XI[it[0]]||XS[id]);if(o)it[4]=Array.isArray(o)?o.map(x=>'i/'+x):'i/'+o});
- h+=`<section class="sec${si?'':' on'}" id="${id}"><h2>${ar}<small>${en}</small></h2>${nt?`<div class="nt">${esc(nt)}</div>`:''}<div class="grid">`+items.map((it,k)=>{ALL[id+'-'+k]=it;return card(it,em,id,k)}).join('')+`</div></section>`;
- t+=`<li><button class="${si?'':'hot on'}" data-s="${id}">${si?'':'🔥 '}${ar}</button></li>`;
-});
-h+='<section class="sec" id="favs"><h2>المفضلة<small>Favorites</small></h2><div class="none"></div><div class="grid"></div></section><section class="sec" id="res"><h2>نتائج البحث<small>Search</small></h2><div class="none"></div><div class="grid"></div></section>';
-t=t.replace('</li>','</li><li><button data-s="favs">❤️ المفضلة</button></li>');
-main.innerHTML=h;tabs.innerHTML=t;
-function fill(id,keys,msg){const s=$('#'+id);s.querySelector('.none').textContent=keys.length?'':msg;s.querySelector('.none').style.display=keys.length?'none':'';
- s.querySelector('.grid').innerHTML=keys.map(k=>{const[sid]=k.split('-'),sec=secs.find(x=>x[0]===sid);return card(ALL[k],sec[3],sid,k.slice(sid.length+1))}).join('')}
+const ALL={},NEN={};
+secs.forEach(([id,,,,,items])=>items.forEach((it,k)=>{ALL[id+'-'+k]=it;NEN[it[0]]=it[1]||it[0];const o=MN.includes(it[0])?XM:(XI[it[0]]||XS[id]);if(o)it[4]=Array.isArray(o)?o.map(x=>'i/'+x):'i/'+o}));
+const nm=it=>(L==='ar'?it[0]:(it[1]||it[0])).replace(NEW,''),alt=it=>L==='ar'?(it[1]||''):(it[1]?it[0].replace(NEW,''):'');
+const cn=n=>L==='ar'?n:(NEN[n]||n);
+const money=n=>n+' '+t('cur'),count=()=>cart.reduce((s,x)=>s+x.q,0);
+const sub=()=>cart.reduce((s,x)=>s+x.p*x.q,0);
+const disc=()=>coupon?Math.min(sub(),coupon.pct?Math.round(sub()*coupon.pct/100):(coupon.off||0)):0;
+const fee=()=>(type==='توصيل'&&zone!==null&&CFG.zones[zone])?CFG.zones[zone][1]:0;
+const grand=()=>sub()-disc()+fee();
+const favs=new Set(sj('popone_fav',[]));
+const track=(ev,d)=>{try{window.gtag&&gtag('event',ev,d);window.fbq&&fbq('track',ev==='purchase'?'Purchase':'AddToCart',d)}catch(e){}};
+const UPK=['باكيت بطاطس كرينكل','كانز','مياه صغيرة','علبة الثومية','إضافة صوص'].map(n=>Object.keys(ALL).find(k=>ALL[k][0]===n)).filter(Boolean);
+function imgTag(img,alt,i){const a=Array.isArray(img)?img[0]:img;return `<img src="${src(img,i||0)}" alt="${esc(alt)}" loading="lazy" referrerpolicy="no-referrer"${/^i\//.test(a)?' class="ph"':''}>`}
+function card(k,em){
+ const it=ALL[k],[n0,,d,p,img]=it,v=vs(p),na=CFG.unavail.includes(n0),isNew=n0.includes(NEW),best=CFG.best.includes(n0);
+ return `<article class="card${na?' na':''}" data-k="${k}"><div class="im"><button class="heart${favs.has(k)?' on':''}" type="button" data-f aria-label="♥">♥</button>${isNew?`<span class="bdg">${t('new')}</span>`:best?`<span class="bdg hot">${t('best')}</span>`:''}${img?imgTag(img,nm(it)):em}</div><div class="bd"><h3>${esc(nm(it))}</h3>${alt(it)?`<div class="en" dir="auto">${esc(alt(it))}</div>`:''}<div class="ds" dir="auto">${esc(d)}</div>`+
+ (v.length>1?`<div class="chips">${v.map((x,i)=>`<button type="button" data-v="${i}" class="${i?'':'on'}">${esc(vl(x[0]))}</button>`).join('')}</div>`:'')+
+ `<div class="row2"><b class="price">${money(v[0][1])}</b><button class="add" type="button"${na?' disabled':''}>${na?t('na'):t('add')}</button></div></div></article>`;
+}
+const emo=k=>secs.find(x=>x[0]===k.split('-')[0])[3];
+function fill(id,keys,msg){const s=$('#'+id),n=s.querySelector('.none');n.textContent=keys.length?'':msg;n.style.display=keys.length?'none':'';s.querySelector('.grid').innerHTML=keys.map(k=>card(k,emo(k))).join('')}
+function build(){
+ document.documentElement.lang=L;document.documentElement.dir=L==='ar'?'rtl':'ltr';
+ let h='',tb='';
+ secs.forEach(([id,ar,en,em,nt,items],si)=>{
+  h+=`<section class="sec" id="${id}"><h2>${L==='ar'?ar:en}<small>${L==='ar'?en:ar}</small></h2>${nt?`<div class="nt" dir="auto">${esc(nt)}</div>`:''}<div class="grid">${items.map((_,k)=>card(id+'-'+k,em)).join('')}</div></section>`;
+  tb+=`<li><button class="${si?'':'hot'}" data-s="${id}">${si?'':'🔥 '}${L==='ar'?ar:en}</button></li>`;
+  if(!si)tb+=`<li><button data-s="favs">❤️ ${t('fav')}</button></li>`;
+ });
+ h+=`<section class="sec" id="favs"><h2>${t('favT')}<small>${L==='ar'?'Favorites':'المفضلة'}</small></h2><div class="none"></div><div class="grid"></div></section><section class="sec" id="res"><h2>${t('res')}<small>${L==='ar'?'Search':'نتائج البحث'}</small></h2><div class="none"></div><div class="grid"></div></section>`;
+ main.innerHTML=h;tabs.innerHTML=tb;
+ $$('[data-t]').forEach(e=>e.textContent=t(e.dataset.t));$$('[data-tp]').forEach(e=>e.placeholder=t(e.dataset.tp));
+ $('#lg').textContent=t('lang');
+ const sel=$('#fz');sel.innerHTML=`<option value="">${t('zonesel')}</option>`+CFG.zones.map((z,i)=>`<option value="${i}">${esc(z[0])} (+${z[1]} ${t('cur')})</option>`).join('');
+ show(cur);renderCart();hours();
+}
 function show(id){
- if(id==='favs')fill('favs',[...favs].filter(k=>ALL[k]),'لسه مضفتش أصناف للمفضلة، اضغط على ♥ في أي صنف');
- document.querySelectorAll('.sec').forEach(e=>e.classList.toggle('on',e.id===id));
- tabs.querySelectorAll('button').forEach(b=>{const on=b.dataset.s===id;b.classList.toggle('on',on);if(on)b.scrollIntoView({inline:'center',block:'nearest'})});
+ cur=id;
+ if(id==='favs')fill('favs',[...favs].filter(k=>ALL[k]),t('favempty'));
+ $$('.sec').forEach(e=>e.classList.toggle('on',e.id===id));
+ $$('#tabs button').forEach(b=>{const on=b.dataset.s===id;b.classList.toggle('on',on);if(on)b.scrollIntoView({inline:'center',block:'nearest'})});
  const top=main.getBoundingClientRect().top+scrollY-110;if(scrollY>top)scrollTo({top});
 }
-tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b){$('#q').value='';last=b.dataset.s;show(last)}});
+// open hours
+function cairoMin(){const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Cairo',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()),g=x=>+p.find(y=>y.type===x).value;return(g('hour')%24)*60+g('minute')}
+const tm=x=>{const[a,b]=x.split(':').map(Number);return a*60+b};
+function isOpen(){if(!CFG.hours)return true;const n=cairoMin(),o=tm(CFG.hours.open),c=tm(CFG.hours.close);return o<=c?(n>=o&&n<c):(n>=o||n<c)}
+function hours(){const e=$('#ob');if(!CFG.hours){e.style.display='none';return}const o=isOpen();e.style.display='';e.className='ob '+(o?'y':'n');e.textContent=o?t('open'):t('closed')+' · '+t('opens')+' '+CFG.hours.open}
+setInterval(hours,60000);
 // cart
-let cart=[];try{cart=JSON.parse(localStorage.getItem('popone_cart')||'[]')}catch(e){}
-const money=n=>n+' ج.م',total=()=>cart.reduce((s,x)=>s+x.p*x.q,0),count=()=>cart.reduce((s,x)=>s+x.q,0);
-function save(){try{localStorage.setItem('popone_cart',JSON.stringify(cart))}catch(e){}render()}
-function render(){
- $('#cn').textContent=count();const c=$('#cbar');c.classList.toggle('on',count()>0);
- $('#cbn').textContent='🛒 السلة ('+count()+')';$('#cbt').textContent=money(total());
- $('#cl').innerHTML=cart.length?cart.map((x,i)=>`<div class="ln"><div class="t">${esc(x.n)}${x.v?`<small>${esc(x.v)}</small>`:''}<small>${money(x.p)}</small></div><div class="qty"><button type="button" data-q="${i}:1" aria-label="زيادة">+</button><b>${x.q}</b><button type="button" data-q="${i}:-1" aria-label="نقص">−</button></div></div>`).join(''):'<div class="empty">السلة فاضية، ضيف أصناف من المنيو 🍗</div>';
- $('#cs').textContent=money(total());$('#ct').style.display=$('#co').style.display=cart.length?'':'none';
+function save(){ss('popone_cart',cart);renderCart()}
+function renderCart(){
+ const n=count(),has=n>0,last=sj('popone_last',[]);
+ $('#cn').textContent=n;$('#cbar').classList.toggle('on',has);
+ $('#cbn').textContent='🛒 '+t('cart')+' ('+n+')';$('#cbt').textContent=money(sub()-disc());
+ $('#cl').innerHTML=has?cart.map((x,i)=>`<div class="ln"><div class="t">${esc(cn(x.n))}${x.v?`<small>${esc(vl(x.v))}</small>`:''}<small>${money(x.p)}</small></div><div class="qty"><button type="button" data-q="${i}:1" aria-label="+">+</button><b>${x.q}</b><button type="button" data-q="${i}:-1" aria-label="−">−</button></div></div>`).join(''):`<div class="empty">${t('empty')}${last.length?`<br><button class="pill red" type="button" data-again style="margin-top:12px">${t('again')}</button>`:''}</div>`;
+ const ups=UPK.filter(k=>!cart.some(x=>x.n===ALL[k][0])).slice(0,4);
+ $('#upw').innerHTML=has&&ups.length?`<div class="hint" style="margin-top:10px">${t('up')}</div><div class="up">${ups.map(k=>`<button type="button" data-up="${k}">+ ${esc(nm(ALL[k]))} · ${vs(ALL[k][3])[0][1]}</button>`).join('')}</div>`:'';
+ const hasC=Object.keys(CFG.coupons).length>0;
+ $('#cpw').style.display=has&&hasC?'':'none';
+ $('#cs').innerHTML=has?(coupon?`<div class="tr"><span>${t('sub')}</span><span>${money(sub())}</span></div><div class="tr"><span>${t('disc')} (${esc(coupon.code)})</span><span>− ${money(disc())}</span></div>`:'')+`<div class="tr tot"><span>${t('tot')}</span><span>${money(sub()-disc())}</span></div>`:'';
+ $('#hnt').style.display=$('#co').style.display=has?'':'none';
 }
 function addItem(k,vi,q){
  const it=ALL[k],v=vs(it[3])[vi],ex=cart.find(x=>x.n===it[0]&&x.v===v[0]);
  ex?ex.q+=q:cart.push({n:it[0],v:v[0],p:v[1],q});save();
- toast('✓ اتضاف للسلة: '+it[0]);const c=$('#cn');c.classList.remove('bump');void c.offsetWidth;c.classList.add('bump');
+ toast(t('addt')+nm(it));const c=$('#cn');c.classList.remove('bump');void c.offsetWidth;c.classList.add('bump');
+ track('add_to_cart',{currency:'EGP',value:v[1]*q,items:[{item_name:it[0],price:v[1],quantity:q}]});
 }
-function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('on'),1600)}
-function setFav(k){favs.has(k)?favs.delete(k):favs.add(k);try{localStorage.setItem('popone_fav',JSON.stringify([...favs]))}catch(e){}
- document.querySelectorAll('.card[data-k="'+k+'"] .heart').forEach(h=>h.classList.toggle('on',favs.has(k)));
- if($('#favs').classList.contains('on'))show('favs');else toast(favs.has(k)?'❤️ اتضاف للمفضلة':'اتشال من المفضلة')}
+function toast(m){const e=$('#toast');e.textContent=m;e.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('on'),1700)}
+function setFav(k){favs.has(k)?favs.delete(k):favs.add(k);ss('popone_fav',[...favs]);
+ $$('.card[data-k="'+k+'"] .heart').forEach(h=>h.classList.toggle('on',favs.has(k)));
+ if(cur==='favs')show('favs');else toast(favs.has(k)?t('favon'):t('favoff'))}
 function openDetail(k){
- const it=ALL[k],sid=k.split('-')[0],em=secs.find(x=>x[0]===sid)[3],v=vs(it[3]);let vi=0,q=1;
- $('#dt').textContent=it[0];
- const d=$('#db');
- d.innerHTML=`<div class="dim">${it[4]?`<img src="${src(it[4],0)}" alt="${esc(it[0])}" referrerpolicy="no-referrer"${/^i\//.test(Array.isArray(it[4])?it[4][0]:it[4])?' class="ph"':''}>`:em}</div>${it[1]?`<div class="en">${esc(it[1])}</div>`:''}${it[2]?`<p>${esc(it[2])}</p>`:''}${v.length>1?`<div class="chips">${v.map((x,i)=>`<button type="button" data-v="${i}" class="${i?'':'on'}">${x[0]} · ${x[1]} ج.م</button>`).join('')}</div>`:''}<div class="dtot"><div class="qty big"><button type="button" data-d="1">+</button><b id="dq">1</b><button type="button" data-d="-1">−</button></div><button class="add" type="button" id="da"></button></div>`;
- const up=()=>{$('#dq').textContent=q;$('#da').textContent='🛒 أضف · '+v[vi][1]*q+' ج.م'};up();
+ const it=ALL[k],em=emo(k),v=vs(it[3]),na=CFG.unavail.includes(it[0]);let vi=0,q=1;
+ $('#dt').textContent=nm(it);const d=$('#db');
+ d.innerHTML=`<div class="dim">${it[4]?imgTag(it[4],nm(it)):em}</div>${alt(it)?`<div class="en" dir="auto">${esc(alt(it))}</div>`:''}${it[2]?`<p dir="auto">${esc(it[2])}</p>`:''}${v.length>1?`<div class="chips">${v.map((x,i)=>`<button type="button" data-v="${i}" class="${i?'':'on'}">${esc(vl(x[0]))} · ${x[1]} ${t('cur')}</button>`).join('')}</div>`:''}<div class="dtot"><div class="qty big"><button type="button" data-d="1">+</button><b id="dq">1</b><button type="button" data-d="-1">−</button></div><button class="add" type="button" id="da"${na?' disabled':''}></button></div>`;
+ const up=()=>{$('#dq').textContent=q;$('#da').textContent=na?t('na'):t('add')+' · '+money(v[vi][1]*q)};up();
  d.onclick=e=>{const c=e.target.closest('.chips button'),n=e.target.closest('[data-d]');
   if(c){vi=+c.dataset.v;const di=d.querySelector('.dim img');if(di&&Array.isArray(it[4]))di.src=src(it[4],vi);d.querySelectorAll('.chips button').forEach(b=>b.classList.toggle('on',b===c));up()}
   else if(n){q=Math.max(1,q+ +n.dataset.d);up()}
-  else if(e.target.closest('#da')){addItem(k,vi,q);closeAll()}};
+  else if(e.target.closest('#da')&&!na){addItem(k,vi,q);closeAll()}};
  $('#dm').classList.add('on');
 }
 main.addEventListener('click',e=>{
- const card=e.target.closest('.card');if(!card)return;const k=card.dataset.k;
+ const c=e.target.closest('.card');if(!c)return;const k=c.dataset.k;
  if(e.target.closest('[data-f]')){setFav(k);return}
  const ch=e.target.closest('.chips button');
- if(ch){card.querySelectorAll('.chips button').forEach(b=>b.classList.toggle('on',b===ch));
-  card.querySelector('.price').textContent=vs(ALL[k][3])[+ch.dataset.v][1]+' ج.م';
-  const im=card.querySelector('.im img'),a=ALL[k][4];if(im&&Array.isArray(a))im.src=src(a,+ch.dataset.v);return}
- if(e.target.closest('.add')){const on=card.querySelector('.chips .on');addItem(k,on?+on.dataset.v:0,1);
-  const b=e.target.closest('.add');b.textContent='✓ اتضاف';setTimeout(()=>b.textContent='🛒 أضف للسلة',900);return}
+ if(ch){c.querySelectorAll('.chips button').forEach(b=>b.classList.toggle('on',b===ch));
+  c.querySelector('.price').textContent=money(vs(ALL[k][3])[+ch.dataset.v][1]);
+  const im=c.querySelector('.im img'),a=ALL[k][4];if(im&&Array.isArray(a))im.src=src(a,+ch.dataset.v);return}
+ if(e.target.closest('.add')){if(CFG.unavail.includes(ALL[k][0]))return;const on=c.querySelector('.chips .on');addItem(k,on?+on.dataset.v:0,1);
+  const b=e.target.closest('.add');b.textContent=t('added');setTimeout(()=>b.textContent=t('add'),900);return}
  openDetail(k);
 });
+tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b){$('#q').value='';show(b.dataset.s)}});
 // search
-let last='offers';
 $('#q').addEventListener('input',e=>{
- const v=e.target.value.trim();
- if(!v){show(last);return}
+ const v=e.target.value.trim();if(!v){show(cur==='res'?'offers':cur);return}
  const n=x=>x.replace(/[ًٌٍَُِّْ]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي').toLowerCase(),w=n(v);
- const keys=Object.keys(ALL).filter(k=>n(ALL[k].slice(0,3).join(' ')).includes(w));
- fill('res',keys,'مفيش نتائج لـ "'+v+'"، جرّب كلمة تانية');
- document.querySelectorAll('.sec').forEach(x=>x.classList.toggle('on',x.id==='res'));
- tabs.querySelectorAll('button').forEach(b=>b.classList.remove('on'));
+ fill('res',Object.keys(ALL).filter(k=>n(ALL[k].slice(0,3).join(' ')).includes(w)),t('nores')+'"'+v+'"'+t('nores2'));
+ cur='res';$$('.sec').forEach(x=>x.classList.toggle('on',x.id==='res'));$$('#tabs button').forEach(b=>b.classList.remove('on'));
 });
-const cm=$('#cm'),om=$('#om'),er=$('#er');let type='توصيل';
-function closeAll(){cm.classList.remove('on');om.classList.remove('on');$('#dm').classList.remove('on')}
+// swipe between tabs
+let sx=0,sy=0;
+main.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
+main.addEventListener('touchend',e=>{
+ const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;
+ if(Math.abs(dx)<90||Math.abs(dy)>50||$('#q').value||e.target.closest('.chips'))return;
+ const ids=$$('#tabs button').map(b=>b.dataset.s),i=ids.indexOf(cur);if(i<0)return;
+ const next=L==='ar'?dx>0:dx<0,j=i+(next?1:-1);
+ if(j>=0&&j<ids.length)show(ids[j]);
+},{passive:true});
+// modals
+const cm=$('#cm'),om=$('#om'),dm=$('#dm'),er=$('#er');
+function closeAll(){[cm,om,dm].forEach(m=>m.classList.remove('on'))}
+function sumHtml(){return cart.map(x=>`<div><span>${x.q} × ${esc(cn(x.n))}${x.v?' ('+esc(vl(x.v))+')':''}</span><b>${money(x.p*x.q)}</b></div>`).join('')+(coupon?`<div><span>${t('disc')} (${esc(coupon.code)})</span><b>− ${money(disc())}</b></div>`:'')+(fee()?`<div><span>${t('fee')}</span><b>${money(fee())}</b></div>`:'')+`<div><b>${t('tot')}</b><b>${money(grand())}</b></div>`}
+function openCheckout(){
+ const u=sj('popone_user',{});
+ if(u.n)$('#fn').value=u.n;if(u.p)$('#fp').value=u.p;if(u.a)$('#fa').value=u.a;
+ if(u.ty){type=u.ty;$$('#seg button').forEach(x=>x.classList.toggle('on',x.dataset.ty===type));$('#adr').style.display=type==='توصيل'?'':'none'}
+ if(u.z!=null&&CFG.zones[u.z]){zone=u.z;$('#fz').value=u.z}
+ $('#zw').style.display=CFG.zones.length&&type==='توصيل'?'':'none';
+ $('#sm').innerHTML=sumHtml();cm.classList.remove('on');om.classList.add('on');
+}
 document.addEventListener('click',e=>{
- if(e.target.closest('[data-cart]')){render();cm.classList.add('on');return}
+ if(e.target.closest('[data-lang]')){L=L==='ar'?'en':'ar';ss('popone_lang',L);build();return}
+ if(e.target.closest('[data-cart]')){renderCart();cm.classList.add('on');return}
  const q=e.target.closest('[data-q]');
  if(q){const[i,d]=q.dataset.q.split(':').map(Number);cart[i].q+=d;if(cart[i].q<1)cart.splice(i,1);save();return}
- if(e.target.closest('[data-close]')||e.target===cm||e.target===om||e.target===$('#dm'))closeAll();
+ const up=e.target.closest('[data-up]');if(up){addItem(up.dataset.up,0,1);return}
+ if(e.target.closest('[data-again]')){cart=sj('popone_last',[]);save();toast(t('added'));return}
+ if(e.target.closest('[data-install]')){if(dp){dp.prompt();dp=null}else toast(t('insth'));return}
+ if(e.target.closest('[data-close]')||e.target===cm||e.target===om||e.target===dm)closeAll();
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
-$('#co').addEventListener('click',()=>{
- $('#sm').innerHTML=cart.map(x=>`<div><span>${x.q} × ${esc(x.n)}${x.v?' ('+esc(x.v)+')':''}</span><b>${money(x.p*x.q)}</b></div>`).join('')+`<div><b>الإجمالي (بدون التوصيل)</b><b>${money(total())}</b></div>`;
- cm.classList.remove('on');om.classList.add('on');
+$('#co').addEventListener('click',()=>{if(!cart.length)return;openCheckout()});
+$('#cpb').addEventListener('click',()=>{
+ const code=$('#cpi').value.trim().toUpperCase(),c=CFG.coupons[code];
+ if(c){coupon={code,...c};toast(t('cpok'))}else{coupon=null;toast(t('cpbad'))}renderCart();
 });
-$('#seg').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;type=b.dataset.t;
- $('#seg').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));$('#adr').style.display=type==='توصيل'?'':'none'});
+$('#seg').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;type=b.dataset.ty;
+ $$('#seg button').forEach(x=>x.classList.toggle('on',x===b));$('#adr').style.display=type==='توصيل'?'':'none';
+ $('#zw').style.display=CFG.zones.length&&type==='توصيل'?'':'none';$('#sm').innerHTML=sumHtml()});
+$('#fz').addEventListener('change',e=>{zone=e.target.value===''?null:+e.target.value;$('#sm').innerHTML=sumHtml()});
 $('#go').addEventListener('click',()=>{
- const n=$('#fn'),p=$('#fp'),a=$('#fa'),o=$('#fo');
- [n,p,a].forEach(x=>x.classList.remove('bad'));er.textContent='';
+ const n=$('#fn'),p=$('#fp'),a=$('#fa'),o=$('#fo'),z=$('#fz');
+ [n,p,a,z].forEach(x=>x.classList.remove('bad'));er.textContent='';
  const ph=p.value.replace(/\D/g,'');let m='';
- if(!n.value.trim()){n.classList.add('bad');m='اكتب اسمك'}
- else if(!/^01[0-9]{9}$/.test(ph)){p.classList.add('bad');m='اكتب رقم موبايل صحيح (11 رقم)'}
- else if(type==='توصيل'&&!a.value.trim()){a.classList.add('bad');m='اكتب عنوان التوصيل'}
+ if(CFG.blockClosed&&!isOpen())m=t('e_closed')+CFG.hours.open;
+ else if(!n.value.trim()){n.classList.add('bad');m=t('e_name')}
+ else if(!/^01[0-9]{9}$/.test(ph)){p.classList.add('bad');m=t('e_phone')}
+ else if(type==='توصيل'&&CFG.zones.length&&zone===null){z.classList.add('bad');m=t('e_zone')}
+ else if(type==='توصيل'&&!a.value.trim()){a.classList.add('bad');m=t('e_addr')}
  if(m){er.textContent=m;return}
- const L=['🧡 طلب جديد من موقع بوب وان','','نوع الطلب: '+type,'الاسم: '+n.value.trim(),'الموبايل: '+ph,...(type==='توصيل'?['العنوان: '+a.value.trim()]:[]),'','الطلب:',
-  ...cart.map(x=>`• ${x.q} × ${x.n}${x.v?' ('+x.v+')':''} = ${x.p*x.q} ج.م`),'','الإجمالي (بدون التوصيل): '+total()+' ج.م',...(o.value.trim()?['','ملاحظات: '+o.value.trim()]:[])];
- window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n')),'_blank','noopener');
+ const L2=['🧡 طلب جديد من موقع بوب وان','','نوع الطلب: '+type,'الاسم: '+n.value.trim(),'الموبايل: '+ph,
+  ...(type==='توصيل'?['العنوان: '+a.value.trim(),...(zone!==null?['المنطقة: '+CFG.zones[zone][0]]:[])]:[]),'','الطلب:',
+  ...cart.map(x=>`• ${x.q} × ${x.n}${x.v?' ('+x.v+')':''} = ${x.p*x.q} ج.م`),'',
+  ...(coupon?['خصم ('+coupon.code+'): -'+disc()+' ج.م']:[]),...(fee()?['رسوم التوصيل: '+fee()+' ج.م']:[]),
+  'الإجمالي: '+grand()+' ج.م'+(CFG.zones.length||type!=='توصيل'?'':' (بدون التوصيل)'),...(o.value.trim()?['','ملاحظات: '+o.value.trim()]:[])];
+ ss('popone_user',{n:n.value.trim(),p:ph,a:a.value.trim(),ty:type,z:zone});
+ ss('popone_last',cart);
+ track('purchase',{currency:'EGP',value:grand()});
+ window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(L2.join('\n')),'_blank','noopener');
+ cart=[];coupon=null;save();closeAll();toast(t('sent'));
 });
-render();
+$('#mp').href=CFG.map;
+// install / PWA
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e});
+if(matchMedia('(display-mode: standalone)').matches)$('#ins').style.display='none';
+try{const base=location.href.split('#')[0].split('?')[0],m={name:'بوب وان | Pop One',short_name:'Pop One',start_url:base,scope:base.replace(/[^/]*$/,''),display:'standalone',background_color:'#F26A10',theme_color:'#F26A10',lang:'ar',dir:'rtl',icons:[{src:'https://i.postimg.cc/8PgJqmj7/favicon.png',sizes:'256x256',type:'image/png'}]};
+ const l=document.createElement('link');l.rel='manifest';l.href=URL.createObjectURL(new Blob([JSON.stringify(m)],{type:'application/manifest+json'}));document.head.appendChild(l)}catch(e){}
+// analytics (يشتغل فقط لو حطيت المعرّفات في CFG)
+if(CFG.ga){const s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+CFG.ga;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',CFG.ga)}
+if(CFG.pixel){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',CFG.pixel);fbq('track','PageView')}
+build();
 </script>
 </body>
 </html>
